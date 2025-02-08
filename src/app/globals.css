@@ -1,0 +1,192 @@
+body {
+    background: linear-gradient(40deg, #385dff, #ff0040);
+    }
+    
+    
+    .Denis{
+        
+        font-size: 20px;
+        font-weight:bold;
+        font-style:italic;
+        font-weight:900;
+        letter-spacing: 1px;
+        text-shadow: 1px 1px 1px #133086;
+        display: block;
+        margin-left: -146px;
+        transition: color 0.4s ease, transform 0.4s ease;
+    }
+    
+    
+    .Alex{
+        font-size: 20px;
+        font-weight:bold;
+        font-style:italic;
+        font-weight:900;
+        letter-spacing: 1px;
+        text-shadow: 1px 1px 1px #133086;
+        display: block;
+        margin-left: -137px;
+        transition: color 0.4s ease, transform 0.4s ease;
+    }
+    
+    .Artem{
+        font-size: 20px;
+        font-weight:bold;
+        font-style:italic;
+        font-weight:900;
+        letter-spacing: 1px;
+        text-shadow: 1px 1px 1px #133086;
+        display: block;
+        margin-left: -153px;
+        transition: color 0.4s ease, transform 0.4s ease;
+    }
+
+    .UserIcon{
+        
+        color: #000000;
+        transition: color 0.4s ease, transform 0.4s ease;
+        
+        
+    }
+    
+    .faUserSecret{
+    
+        color: #000000;
+        transition: color 0.4s ease, transform 0.4s ease;
+    
+    }
+    
+    .faUserNinja{
+    
+        color: #000000;
+        transition: color 0.4s ease, transform 0.4s ease;
+    
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        
+    }
+
+    .message {
+        display: flex;
+        
+        gap: 15px; 
+    }
+    
+    .icon-name {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .text {
+        display: flex;
+        align-items: end;
+       
+        
+    }
+    
+
+   .time {
+    font-size: 1.2rem;
+    color: #242424;
+    text-shadow: 1px 1px 5px #ffee00;
+    transition: color 0.4s ease, transform 0.4s ease;
+    
+  }
+
+   .time:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+    
+  }
+    
+    
+    p{
+
+        margin: 0;
+        
+    }
+    
+  
+    .UserIcon, .faUserSecret, .faUserNinja {
+
+        font-size: 40px; 
+        width: 40px; 
+        height: 40px; 
+       
+    
+    }
+    
+    .name{
+        font-weight: bold;
+        text-shadow: 1px 1px 1px #ffffff;
+        font-size: 20px;
+        color: #000000;
+        transition: color 0.4s ease, transform 0.4s ease;
+    }
+
+    .name-Denis:hover{
+        transform: scale(1.1);
+        color: #ff0000;
+        
+    }
+
+    .name-Alex:hover{
+        transform: scale(1.1);
+        color: #7bff00;
+        
+    }
+
+    .name-Artem:hover{
+        transform: scale(1.1);
+        color: #ffee00;
+        
+    }
+
+   
+    .name-time {
+        display: flex;
+        align-items: flex-start;
+        gap: 24px;
+        
+    }
+
+   
+
+    .UserIcon:hover {
+        color: #ff0000;
+        transform: scale(1.3);
+    }
+
+    .faUserSecret:hover {
+        color: #7bff00;
+        transform: scale(1.3);
+    }
+
+    .faUserNinja:hover {
+        color: #ffee00;
+        transform: scale(1.3);
+    }
+
+    .Denis:hover{
+        color: #ff0000;
+        transform: scale(1.1);
+    }
+
+    .Alex:hover{
+        color: #7bff00;
+        transform: scale(1.1);
+        
+    
+    }
+
+    .Artem:hover{
+        color: #ffee00;
+        transform: scale(1.1);
+        
+    }
+   
