@@ -10,7 +10,7 @@ body {
         font-style:italic;
         font-weight:900;
         letter-spacing: 1px;
-        text-shadow: 1px 1px 1px #133086;
+        text-shadow: 1px 1px 1px #0040ff;
         display: block;
         margin-left: -146px;
         transition: color 0.4s ease, transform 0.4s ease;
@@ -23,7 +23,7 @@ body {
         font-style:italic;
         font-weight:900;
         letter-spacing: 1px;
-        text-shadow: 1px 1px 1px #133086;
+        text-shadow: 1px 1px 1px #0040ff;
         display: block;
         margin-left: -137px;
         transition: color 0.4s ease, transform 0.4s ease;
@@ -35,7 +35,7 @@ body {
         font-style:italic;
         font-weight:900;
         letter-spacing: 1px;
-        text-shadow: 1px 1px 1px #133086;
+        text-shadow: 1px 1px 1px #0040ff;
         display: block;
         margin-left: -153px;
         transition: color 0.4s ease, transform 0.4s ease;
@@ -123,7 +123,7 @@ body {
     
     .name{
         font-weight: bold;
-        text-shadow: 1px 1px 1px #ffffff;
+        text-shadow: 2px 2px 2px #8b8b8b;
         font-size: 20px;
         color: #000000;
         transition: color 0.4s ease, transform 0.4s ease;
