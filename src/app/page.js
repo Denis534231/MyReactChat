@@ -1,49 +1,89 @@
+'use client';  
 
-import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react' 
 
-import { faUserSecret } from '@fortawesome/free-solid-svg-icons';
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
-import { faUserNinja } from '@fortawesome/free-solid-svg-icons';
+import { faUserSecret } from "@fortawesome/free-solid-svg-icons";
 
-import MyChat from './components/MyMessages';
+import { faUserNinja } from "@fortawesome/free-solid-svg-icons";
+
+import Message from "./components/MyMessages";
 
 
+export default function MyMainComponent() {
+  
+  const message_text = [
 
-export default function denis() {
+    { id: 1, name: "Denis", time: "9:22", text: "hello everybody", icon: faUser },
 
-return(
+    { id: 2, name: "Alex", time: "9:23", text: "hello", icon: faUserSecret },
 
-    <div className='container'>
+    { id: 3, name: "Artem", time: "9:24", text: "hi", icon: faUserNinja },
 
+    { id: 4, name: "Denis", time: "9:25", text: "how are you doing guys?", icon: faUser },
+
+    { id: 5, name: "Alex", time: "9:26", text: "i'm good, thank you", icon: faUserSecret },
+
+    { id: 6, name: "Artem", time: "9:27", text: "me as well", icon: faUserNinja },
+
+    { id: 7, name: "Denis", time: "9:28", text: "good bye", icon: faUser },
+
+    { id: 8, name: "Alex", time: "9:29", text: "bye", icon: faUserSecret },
+
+    { id: 9, name: "Artem", time: "9:30", text: "see you soon", icon: faUserNinja },
     
-   
-       <MyChat name="Denis" time="9:22" text="hello everybody" icon={faUser}/>
+  ]
 
-       <MyChat name="Alex" time="9:23" text="hello" icon={faUserSecret}/>
+  const Check = () => {
 
-       <MyChat name="Artem" time="9:24" text="hi" icon={faUserNinja}/>
+  console.log(Messages)
 
-       <MyChat name="Denis" time="9:25" text="how are you doing guys?" icon={faUser}/>
+  }
 
-       <MyChat name="Alex" time="9:26" text="i'm good, thank you" icon={faUserSecret}/>
+  const newMessage = () => {
 
-       <MyChat name="Artem" time="9:27" text="me as well" icon={faUserNinja}/>
+    setMessages([...Messages, inputValue])
+    setInputValue('')
 
-       <MyChat name="Denis" time="9:28" text="bye" icon={faUser}/>
+  }
+  
 
-       <MyChat name="Alex" time="9:29" text="good bye" icon={faUserSecret}/>
+  const change = (event) =>  {
 
-       <MyChat name="Artem" time="9:30" text="see you soon" icon={faUserNinja}/>
+    setInputValue(event.target.value)
     
-       
-       </div>
+  }
 
+  const [Messages, setMessages] = useState([])
 
-)
+  const [inputValue, setInputValue] = useState('')
 
+  const [SecondinputValue, setSecondinputValue] = useState('')
+ 
+  return (
+    <div className="container">
 
+      <div className="btn_ipt">
 
+        <input className="input" type="text" value={inputValue} onChange={change} placeholder="New message" />
 
+        <input className="input" type="text" value={SecondinputValue} onChange={(eventt) => {setSecondinputValue(eventt.target.value)}} placeholder="Add name" />
+
+        <button className="button" onClick={newMessage}>Add</button>
+
+        <button className="button" onClick={Check}>Checking</button>
+      </div>
+
+      {Messages.map(function (Iteration, index) {
+        return (
+          <div key={index}>
+         <Message name={SecondinputValue} icon={faUser} text={Iteration} time='22:22'/>
+         </div>
+        )
+      })}
+    </div>
+  )
 }
 
 
