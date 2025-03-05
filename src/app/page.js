@@ -35,15 +35,14 @@ export default function MyMainComponent() {
     
   ]
 
-  const Check = () => {
-
-  console.log(Messages)
-
+ 
+  const click = () => {
+    console.log(Messages)
   }
 
   const newMessage = () => {
 
-    setMessages([...Messages, inputValue])
+    setMessages([...Messages, {text: inputValue, Name: SecondInputValue }])
     setInputValue('')
 
   }
@@ -59,7 +58,9 @@ export default function MyMainComponent() {
 
   const [inputValue, setInputValue] = useState('')
 
-  const [SecondinputValue, setSecondinputValue] = useState('')
+  const [SecondInputValue, setSecondInputValue] = useState('')
+
+  
  
   return (
     <div className="container">
@@ -68,17 +69,19 @@ export default function MyMainComponent() {
 
         <input className="input" type="text" value={inputValue} onChange={change} placeholder="New message" />
 
-        <input className="input" type="text" value={SecondinputValue} onChange={(eventt) => {setSecondinputValue(eventt.target.value)}} placeholder="Add name" />
+        <input className="input" type="text" value={SecondInputValue} onChange={(eventt) => {setSecondInputValue(eventt.target.value)}} placeholder="Name" />
 
         <button className="button" onClick={newMessage}>Add</button>
 
-        <button className="button" onClick={Check}>Checking</button>
+        <button className="button" onClick={click}>Checking</button>
+
+        
       </div>
 
       {Messages.map(function (Iteration, index) {
         return (
-          <div key={index}>
-         <Message name={SecondinputValue} icon={faUser} text={Iteration} time='22:22'/>
+         <div key={index}>
+            <Message name={Iteration.Name} text={Iteration.text} icon={faUser} time='22:22'/>
          </div>
         )
       })}
