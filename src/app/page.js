@@ -42,7 +42,8 @@ export default function MyMainComponent() {
 
   const newMessage = () => {
 
-    setMessages([...Messages, {text: inputValue, Name: SecondInputValue }])
+    const timeNow = new Date().toLocaleTimeString()
+    setMessages([...Messages, {text: inputValue, name: SecondInputValue, time: timeNow }])
     setInputValue('')
 
   }
@@ -54,7 +55,11 @@ export default function MyMainComponent() {
     
   }
 
-  const [Messages, setMessages] = useState([])
+  const [Messages, setMessages] = useState([{name: "Denis", time: "9:22", text: "hello everybody", icon: faUser },
+
+    {name: "Alex", time: "9:23", text: "hello", icon: faUserSecret },
+
+    {name: "Artem", time: "9:24", text: "hi", icon: faUserNinja }])
 
   const [inputValue, setInputValue] = useState('')
 
@@ -75,13 +80,15 @@ export default function MyMainComponent() {
 
         <button className="button" onClick={click}>Checking</button>
 
+        <input className="input" type="text" value={SecondInputValue} onChange={(eventt) => {setSecondInputValue(eventt.target.value)}} placeholder="New group" />
+
         
       </div>
 
       {Messages.map(function (Iteration, index) {
         return (
          <div key={index}>
-            <Message name={Iteration.Name} text={Iteration.text} icon={faUser} time='22:22'/>
+            <Message name={Iteration.name} text={Iteration.text} icon={faUser} time={Iteration.time}/>
          </div>
         )
       })}
