@@ -1,6 +1,8 @@
 'use client';  
 
-import { useState } from 'react' 
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+
+import { useState } from 'react';
 
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 
@@ -37,7 +39,9 @@ export default function MyMainComponent() {
 
  
   const click = () => {
+    
     console.log(Messages)
+    
   }
 
   const newMessage = () => {
@@ -47,6 +51,7 @@ export default function MyMainComponent() {
     setInputValue('')
 
   }
+  
   
 
   const change = (event) =>  {
@@ -68,7 +73,26 @@ export default function MyMainComponent() {
   
  
   return (
+
+    
+
+
     <div className="container">
+
+    <a href="/">link</a>
+
+    <Link to='/'>hello</Link>
+
+    <BrowserRouter>
+
+    <Routes>
+      
+        <Route path="/" element={<MyMainComponent/>} />
+        
+    </Routes>
+
+    </BrowserRouter>
+
 
       <div className="btn_ipt">
 
@@ -80,9 +104,10 @@ export default function MyMainComponent() {
 
         <button className="button" onClick={click}>Checking</button>
 
-        <input className="input" type="text" value={SecondInputValue} onChange={(eventt) => {setSecondInputValue(eventt.target.value)}} placeholder="New group" />
+        <input className="input" type="text" placeholder="New group" />
 
-        
+        <button className="button">Add</button>
+
       </div>
 
       {Messages.map(function (Iteration, index) {
@@ -95,6 +120,7 @@ export default function MyMainComponent() {
     </div>
   )
 }
+
 
 
 
