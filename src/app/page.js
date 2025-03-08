@@ -41,6 +41,7 @@ export default function MyMainComponent() {
   const click = () => {
     
     console.log(Messages)
+    console.log(Array.isArray(Messages))
     
   }
 
@@ -77,23 +78,22 @@ export default function MyMainComponent() {
     
 
 
-    <div className="container">
-
-    <a href="/">link</a>
-
-    <Link to='/'>hello</Link>
+    
+<div className="container">
+    <a href="/">hello</a>
 
     <BrowserRouter>
-
-    <Routes>
       
-        <Route path="/" element={<MyMainComponent/>} />
+      
+        <Link to='/'>hello</Link>  
         
-    </Routes>
-
+        <Routes>
+          <Route path="/" element={<Message />} />
+        </Routes>
+      
     </BrowserRouter>
 
-
+    
       <div className="btn_ipt">
 
         <input className="input" type="text" value={inputValue} onChange={change} placeholder="New message" />
@@ -118,7 +118,9 @@ export default function MyMainComponent() {
         )
       })}
     </div>
+    
   )
+  
 }
 
 
