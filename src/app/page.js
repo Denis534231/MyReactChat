@@ -12,9 +12,11 @@ import { faUserNinja } from "@fortawesome/free-solid-svg-icons";
 
 import Message from "./components/MyMessages";
 
+import Group from "./components/Group";
+
 
 export default function MyMainComponent() {
-  
+
   const message_text = [
 
     { id: 1, name: "Denis", time: "9:22", text: "hello everybody", icon: faUser },
@@ -80,15 +82,15 @@ export default function MyMainComponent() {
 
     
 <div className="container">
-    <a href="/">hello</a>
+   
 
     <BrowserRouter>
       
       
-        <Link to='/'>hello</Link>  
+        <Link to='/group'>hello</Link>  
         
         <Routes>
-          <Route path="/" element={<Message />} />
+          <Route path="/group" element={<Group />} />
         </Routes>
       
     </BrowserRouter>
