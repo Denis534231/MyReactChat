@@ -14,8 +14,25 @@ import Message from "./components/MyMessages";
 
 import Group from "./components/Group";
 
+export default function App() {
 
-export default function MyMainComponent() {
+  return(
+  <BrowserRouter>
+
+      <Link to='/'>Home</Link>
+      
+      <Link to='/group'>Group   </Link>  
+
+      <Routes>
+        <Route path="/" element={<MyMainComponent />} />
+        <Route path="/group" element={<Group />} />
+      </Routes>
+    
+  </BrowserRouter>
+  )
+}
+
+function MyMainComponent() {
 
   const message_text = [
 
@@ -82,18 +99,7 @@ export default function MyMainComponent() {
 
     
 <div className="container">
-   
 
-    <BrowserRouter>
-      
-      
-        <Link to='/group'>hello</Link>  
-        
-        <Routes>
-          <Route path="/group" element={<Group />} />
-        </Routes>
-      
-    </BrowserRouter>
 
     
       <div className="btn_ipt">
