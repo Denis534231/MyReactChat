@@ -70,6 +70,17 @@ body {
         
     }
 
+    .sidebar{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        color: #ff0000;
+        position: absolute;
+        top: 40px;
+        
+    }
+
+
     .message {
         display: flex;
         
