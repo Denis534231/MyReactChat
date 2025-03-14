@@ -14,7 +14,9 @@ import ChatWithArtem from "./components/ChatWithArtem";
 
 export default function App() {
   return (
-    <>
+    
+    
+    <div className="containr">
       <h1>Select</h1>
       <BrowserRouter>
       
@@ -41,7 +43,7 @@ export default function App() {
           </li>
           </div>
         </ul>
-     
+        
         <Routes>
           <Route path="Chat" element={<MyMainComponent />} />
           <Route path="ChatWithDennis" element={<ChatWithDennis />} />
@@ -49,7 +51,8 @@ export default function App() {
           <Route path="ChatWithArtem" element={<ChatWithArtem />} />
         </Routes>
       </BrowserRouter>
-      </>
+      
+      </div>
   )
 }
   

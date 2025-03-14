@@ -1,31 +1,62 @@
 import React from 'react';
 
-export default function ChatWithDennis() {
-return(
-    <div className='container'>
+import { useState } from 'react';
+
+import { faUser } from "@fortawesome/free-solid-svg-icons";
+
+import { faUserSecret } from "@fortawesome/free-solid-svg-icons";
+
+import { faUserNinja } from "@fortawesome/free-solid-svg-icons";
+
+import Message from "./MyMessages";
+
+export default function ChatWithAlex() {
+
+      const newMessage = () => {
     
-    <p>Hello, Dennis</p>
-
-    <p>Hi</p>
-
-    <p>Where are you now?</p>
-
-    <p>Home</p>
-
-    <p>What do you want?</p>
-
-    <p>Would you like to take a walk?</p>
-
-    <p>Yes, sure</p>
-
-    <p>Where will we go?</p> 
-
-    <p>Let's walk over neighborhood</p>
-
-    <p>Ok, see you there </p>
-
-    <p>See you </p>
+        const timeNow = new Date().toLocaleTimeString()
+        setMessages([...Messages, {text: inputValue, name: SecondInputValue, time: timeNow }])
+        setInputValue('')
     
-    </div>
+      }
+    
+      const change = (event) =>  {
+    
+        setInputValue(event.target.value)
+        
+      }
+    
+      const [Messages, setMessages] = useState([{}])
+    
+      const [inputValue, setInputValue] = useState('Hello, Dennis')
+    
+      const [SecondInputValue, setSecondInputValue] = useState('Denys')
+    
+      
+     
+      return (
+        
+        <div className="container">
+    
+          <div className="btn_ipt">
+    
+            <input className="input" type="text" value={inputValue} onChange={change} placeholder="New message" />
+    
+            <input className="input" type="text" value={SecondInputValue} onChange={(eventt) => {setSecondInputValue(eventt.target.value)}} placeholder="Name" />
+    
+            <button className="button" onClick={newMessage}>Add</button>
+        
+          </div>
+    
+          {Messages.map(function (Iteration, index) {
+            return (
+             <div key={index}>
+                <Message name={Iteration.name} text={Iteration.text} icon={faUser} time={Iteration.time}/>
+             </div>
+            )
+          })}
+        </div>
+        
+      
 )
 }

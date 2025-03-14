@@ -70,6 +70,14 @@ body {
         
     }
 
+    /* .containr{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        color: #7bff00;
+        
+    } */
+
     .sidebar{
         display: flex;
         flex-direction: column;
