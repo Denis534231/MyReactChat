@@ -1,3 +1,5 @@
+'use client';  
+
 import React from 'react';
 
 import { useState } from 'react';
@@ -8,7 +10,7 @@ import { faUserSecret } from "@fortawesome/free-solid-svg-icons";
 
 import { faUserNinja } from "@fortawesome/free-solid-svg-icons";
 
-import Message from "./MyMessages";
+import Message from "../MyMessages";
 
 export default function ChatWithAlex() {
 

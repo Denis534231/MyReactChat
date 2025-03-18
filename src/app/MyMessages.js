@@ -1,3 +1,5 @@
+'use client';  
+
 import React from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -25,6 +27,3 @@ const Message = (props) => {
   
 
 export default Message;
-
-
-

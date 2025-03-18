@@ -1,3 +1,5 @@
+'use client';  
+
 import React from 'react';
 
 import { useState } from 'react';
@@ -8,9 +10,9 @@ import { faUserSecret } from "@fortawesome/free-solid-svg-icons";
 
 import { faUserNinja } from "@fortawesome/free-solid-svg-icons";
 
-import Message from "./MyMessages";
+import Message from "../MyMessages";
 
-export default function ChatWithArtem() {
+export default function ChatWithDennis() {
 
       const newMessage = () => {
     
@@ -26,21 +28,11 @@ export default function ChatWithArtem() {
         
       }
     
-      const [Messages, setMessages] = useState([{name: "Arteem", time: "9:22", text: "Hello, Denys"},
-        
-        {name: "Denys", time: "9:23", text: "Hello"  },
+      const [Messages, setMessages] = useState([{}])
     
-        {name: "Arteem", time: "9:24", text: "How are you?"  },
-        
-        {name: "Arteem", time: "9:22", text: "Are you free tomorrow?" },
+      const [inputValue, setInputValue] = useState('Hello, Dennis')
     
-        {name: "Denys", time: "9:23", text: "I feel great, yes, I'm free" },
-    
-        {name: "Arteem", time: "9:24", text: "Ok, i will meet you tomorrow then"}])
-    
-      const [inputValue, setInputValue] = useState('')
-    
-      const [SecondInputValue, setSecondInputValue] = useState('')
+      const [SecondInputValue, setSecondInputValue] = useState('Denys')
     
       
      

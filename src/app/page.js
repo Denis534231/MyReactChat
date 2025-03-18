@@ -1,58 +1,32 @@
 'use client';  
 
-import "./globals.css"
+import Link from 'next/link';
 
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import "./globals.css";
 
-import MyMainComponent from "./components/MainComponent";
+import MyMainComponent from "./mainComponent/page";
 
-import ChatWithDennis from "./components/ChatWithDennis";
+import ChatWithDennis from "./chatWithDennis/page";
 
-import ChatWithAlex from "./components/ChatWithAlex";
+import ChatWithAlex from "./chatWithAlex/page";
 
-import ChatWithArtem from "./components/ChatWithArtem";
+import ChatWithArtem from "./chatWithArtem/page";
 
 export default function App() {
   return (
     
-    
-    <div className="containr">
-      <h1>Select</h1>
-      <BrowserRouter>
+    <div className="container">
       
-        <ul>
-        <div className="container">
-        <li>
-            <Link to="/">Home </Link>
-          </li>
+      <h1>Select</h1>
 
-          <li>
-            <Link to="Chat">Chat </Link>
-          </li>
-  
-          <li>
-            <Link to="ChatWithDennis"> Dennis </Link>
-          </li>
+      <Link href="/mainComponent">Chat</Link>
 
-          <li>
-            <Link to="ChatWithAlex"> Alex </Link>
-          </li>
+      <Link href="/chatWithAlex">Alex</Link>
 
-          <li>
-            <Link to="ChatWithArtem"> Artem </Link>
-          </li>
-          </div>
-        </ul>
-        
-        <Routes>
-          <Route path="Chat" element={<MyMainComponent />} />
-          <Route path="ChatWithDennis" element={<ChatWithDennis />} />
-          <Route path="ChatWithAlex" element={<ChatWithAlex />} />
-          <Route path="ChatWithArtem" element={<ChatWithArtem />} />
-        </Routes>
-      </BrowserRouter>
+      <Link href="/chatWithArtem">Artem</Link>
+
+      <Link href="/chatWithDennis">Dennis</Link>
       
       </div>
   )
 }
-  
