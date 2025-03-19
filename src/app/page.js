@@ -1,8 +1,8 @@
 'use client';  
 
-import Link from 'next/link';
-
 import "./globals.css";
+
+import Link from 'next/link';
 
 import MyMainComponent from "./mainComponent/page";
 
@@ -18,6 +18,8 @@ export default function App() {
     <div className="container">
       
       <h1>Select</h1>
+
+      <Link href="/">Home</Link>
 
       <Link href="/mainComponent">Chat</Link>
 
