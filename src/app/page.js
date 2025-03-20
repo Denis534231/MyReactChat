@@ -28,6 +28,8 @@ export default function App() {
       <Link href="/chatWithArtem">Artem</Link>
 
       <Link href="/chatWithDennis">Dennis</Link>
+
+      <Link href="/authorization">Authorization</Link>
       
       </div>
   )
