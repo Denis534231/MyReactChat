@@ -4,6 +4,6 @@ import React from 'react';
 
 export default function Authorization() {
 
-   return <h1>Authorization</h1>
+//    return <h1>Authorization</h1>
 
 }

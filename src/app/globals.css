@@ -240,4 +240,19 @@ body {
 }
 
 
+.sidebar{
+    width: 200px;
+    height: 100vh;
+    background-color: #0040ff;
+    padding: 20px;
 
+}
+
+.layout{
+    display: flex;
+}
+
+main{
+    flex-grow: 1;
+    background-color: #ff0040;
+}
