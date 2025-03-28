@@ -4,6 +4,8 @@ import React from 'react';
 
 import { useState } from 'react';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 import { faUserSecret } from "@fortawesome/free-solid-svg-icons";
@@ -47,19 +49,22 @@ export default function ChatWithArtem() {
       
      
       return (
+        <>
+        <div className='hat'>
+        <FontAwesomeIcon icon={faUser} className="TemporaryDenysIcon" />
+        <p className='TemporaryDenysName'>Denys</p>
+        </div>
         
         <div className="container">
-    
+
           <div className="btn_ipt">
     
-            <input className="input" type="text" value={inputValue} onChange={change} placeholder="New message" />
-    
-            <input className="input" type="text" value={SecondInputValue} onChange={(eventt) => {setSecondInputValue(eventt.target.value)}} placeholder="Name" />
-    
+            <input className="inputArtem" type="text" value={inputValue} onChange={change} placeholder="New message" />
+        
             <button className="button" onClick={newMessage}>Add</button>
         
           </div>
-    
+
           {Messages.map(function (Iteration, index) {
             return (
              <div key={index}>
@@ -68,7 +73,7 @@ export default function ChatWithArtem() {
             )
           })}
         </div>
-        
+        </>
       
 )
 }

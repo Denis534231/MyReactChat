@@ -4,7 +4,7 @@ import React from 'react';
 
 import Link from 'next/link';
 
-export default function Chats() {
+export default function directMesssages() {
 return(
   <div className='container'>
     
@@ -17,10 +17,5 @@ return(
     )
     
   }
-  
-  
-  
-  
-  
   
   
