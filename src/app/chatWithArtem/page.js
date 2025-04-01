@@ -12,7 +12,13 @@ import { faUserSecret } from "@fortawesome/free-solid-svg-icons";
 
 import { faUserNinja } from "@fortawesome/free-solid-svg-icons";
 
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+
+import { faSquarePlus } from "@fortawesome/free-solid-svg-icons";
+
 import Message from "../MyMessages";
+
+ 
 
 export default function ChatWithArtem() {
 
@@ -50,21 +56,12 @@ export default function ChatWithArtem() {
      
       return (
         <>
+        <div className="container">
         <div className='hat'>
         <FontAwesomeIcon icon={faUser} className="TemporaryDenysIcon" />
-        <p className='TemporaryDenysName'>Denys</p>
+        <p className='TemporaryDenysName'>Artem</p>
         </div>
-        
-        <div className="container">
-
-          <div className="btn_ipt">
-    
-            <input className="inputArtem" type="text" value={inputValue} onChange={change} placeholder="New message" />
-        
-            <button className="button" onClick={newMessage}>Add</button>
-        
-          </div>
-
+      
           {Messages.map(function (Iteration, index) {
             return (
              <div key={index}>
@@ -72,6 +69,16 @@ export default function ChatWithArtem() {
              </div>
             )
           })}
+          <div className="btn_ipt">
+
+            <button className='plus'><FontAwesomeIcon icon={faSquarePlus} /></button>
+
+            <input className="inputArtem" type="text" value={inputValue} onChange={change} placeholder='Hi, Artem'/>
+
+            <button className='send' onClick={newMessage}><FontAwesomeIcon icon={faPaperPlane} />  </button>  
+        
+          </div>
+
         </div>
         </>
       

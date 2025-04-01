@@ -66,7 +66,7 @@ body {
     .container{
         display: flex;
         flex-direction: column;
-        gap: 50px;
+        gap: 46px;
         
     }
 
@@ -281,25 +281,71 @@ main{
 }
 
 .inputArtem{
-    background-color: #413f3f9f;
-    border-radius: 5px;
-    font-size: large;
-    width: 500px;
+    background-color: #7d7d7d9f;
+    border-radius: 15px;
+    font-size: xx-large;
+    width: 1000px;
+}
+
+.inputArtem::placeholder{
+    color: #000000ab;
+    font-size: x-large;
+
 }
 
 .btn_ipt{
-    display: flex;
+       display: flex;
         
         gap: 50px; 
-
-        top: 599px;
-
-        position: absolute;
+        justify-content: space-between;
 
         width: 100%;
         height: 100px;
-        background-color: rgb(153, 151, 151);
+        background-color: rgb(224, 224, 224);
         align-items: center;
         flex-direction: row;
         
+}
+
+.send {
+    color: #000000;
+    background-size: 0;
+    background: none;
+    border: none;
+    font-size: xx-large;
+    border-radius: 122px;
+    padding: 10px 15px;
+    text-shadow: 1px 1px 1px #11e97adc;
+    transition: color 0.3s ease, transform 0.3s ease-in-out;
+  }
+
+  .plus{
+    color: #000000;
+    background-size: 0;
+    background: none;
+    border: none;
+    font-size: xx-large;
+    border-radius: 122px;
+    padding: 10px 15px;
+    text-shadow: 1px 1px 1px #11e97adc;
+    transition: color 0.3s ease, transform 0.3s ease-in-out;
+  }
+
+.plus:hover{
+    color: #414932;
+    transform: scale(1.5);
+}
+
+.plus:active{
+    transform: scale(0.6);
+}
+
+
+.send:hover{
+    color: #414932;
+    transform: scale(1.5);
+}
+
+.send:active{
+    transform: scale(0.6);
 }
