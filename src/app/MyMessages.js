@@ -13,12 +13,12 @@ const Message = (props) => {
           <div className="icon">
             <FontAwesomeIcon icon={props.icon} className={`icon-${props.name}`} />
           </div>
-          <div className='name-time'>
-            <p className={`name name-${props.name}`}>{props.name}</p>
-            <p className="time">{props.time}</p>
-          </div>
           <div className="text">
             <p className={props.name}>{props.text}</p>
+          </div>
+          <div className='name-time'>
+            {/* <p className={`name name-${props.name}`}>{props.name}</p> */}
+            <p className="time">{props.time}</p>
           </div>
         </div>
       </div>

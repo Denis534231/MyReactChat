@@ -91,30 +91,38 @@ body {
 
     .message {
         display: flex;
-        
+        /* justify-content: space-between; */
         gap: 15px; 
+        width: 300px;
+        height: 30px;
+        border-radius: 11px;
+        background-color: #00ff0da2;
+        margin-left: 25px;
+        flex-direction: row;
+
     }
     
     .icon-name {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         gap: 10px;
     }
     
     .text {
         display: flex;
-        align-items: end;
+        align-items: center;
+        font-size: medium;
+        font-weight: bold;
        
         
     }
     
 
    .time {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #242424;
     text-shadow: 1px 1px 5px #ffee00;
     transition: color 0.4s ease, transform 0.4s ease;
-    
   }
 
    .time:hover {
@@ -169,7 +177,7 @@ body {
    
     .name-time {
         display: flex;
-        align-items: flex-start;
+        align-items: end;
         gap: 24px;
         
     }
@@ -265,6 +273,11 @@ main{
 .TemporaryDenysIcon{
     font-size: 80px;
     margin-left: 40px;
+    width: 60px;
+    height: 60px;
+    background-color: #c5df1e;
+    border-radius: 50%;
+    
 }
 
 .TemporaryDenysName{
@@ -348,4 +361,20 @@ main{
 
 .send:active{
     transform: scale(0.6);
+}
+
+.icon-Test{
+    display: flex;
+
+    margin-left: -30px;
+    border-radius: 2px;
+    height: 25px;
+    width: 25px;
+    background-color: #c5df1e;
+    border-radius: 50%;
+    justify-content: center;
+}
+
+.icon{
+    
 }

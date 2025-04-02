@@ -65,7 +65,7 @@ export default function ChatWithArtem() {
           {Messages.map(function (Iteration, index) {
             return (
              <div key={index}>
-                <Message name={Iteration.name} text={Iteration.text} icon={faUser} time={Iteration.time}/>
+                <Message name={'Test'} text={Iteration.text} icon={faUser} time={Iteration.time}/>
              </div>
             )
           })}
