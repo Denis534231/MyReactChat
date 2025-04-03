@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(40deg, #385dff, #ff0040);
+    background-color: #4a7dbf;
     }
     
     
@@ -96,7 +96,7 @@ body {
         width: 300px;
         height: 30px;
         border-radius: 11px;
-        background-color: #00ff0da2;
+        background-color: #4fd84abb;
         margin-left: 25px;
         flex-direction: row;
 
@@ -294,7 +294,7 @@ main{
 }
 
 .inputArtem{
-    background-color: #7d7d7d9f;
+    background-color: #ffffff9f;
     border-radius: 15px;
     font-size: xx-large;
     width: 1000px;
@@ -314,7 +314,7 @@ main{
 
         width: 100%;
         height: 100px;
-        background-color: rgb(224, 224, 224);
+        background-color: rgba(203, 203, 203, 0.704);
         align-items: center;
         flex-direction: row;
         
@@ -375,6 +375,28 @@ main{
     justify-content: center;
 }
 
-.icon{
-    
+.checkIcon{
+    display: flex;
+    align-items: end;
+}
+
+.TemporaryMicrophoneIcon{
+    color: #000000;
+    background-size: 0;
+    background: none;
+    border: none;
+    font-size: xx-large;
+    border-radius: 122px;
+    padding: 10px 15px;
+    text-shadow: 1px 1px 1px #11e97adc;
+    transition: color 0.3s ease, transform 0.3s ease-in-out;
+}
+
+.TemporaryMicrophoneIcon:hover{
+    color: #414932;
+    transform: scale(1.5);
+}
+
+.TemporaryMicrophoneIcon:active{
+    transform: scale(0.6);
 }

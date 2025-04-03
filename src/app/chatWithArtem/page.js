@@ -16,6 +16,11 @@ import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
 import { faSquarePlus } from "@fortawesome/free-solid-svg-icons";
 
+import { IoCheckmarkDoneOutline } from "react-icons/io5";
+
+import { faMicrophone } from "@fortawesome/free-solid-svg-icons";
+
+
 import Message from "../MyMessages";
 
  
@@ -34,6 +39,10 @@ export default function ChatWithArtem() {
     
         setInputValue(event.target.value)
         
+      }
+
+      const addPhoto = () => {
+
       }
     
       const [Messages, setMessages] = useState([{name: "Arteem", time: "9:22", text: "Hello, Denys"},
@@ -59,6 +68,7 @@ export default function ChatWithArtem() {
         <div className="container">
         <div className='hat'>
         <FontAwesomeIcon icon={faUser} className="TemporaryDenysIcon" />
+        
         <p className='TemporaryDenysName'>Artem</p>
         </div>
       
@@ -71,11 +81,13 @@ export default function ChatWithArtem() {
           })}
           <div className="btn_ipt">
 
-            <button className='plus'><FontAwesomeIcon icon={faSquarePlus} /></button>
+            <button className='plus' onClick={addPhoto}><FontAwesomeIcon icon={faSquarePlus} /></button>
 
             <input className="inputArtem" type="text" value={inputValue} onChange={change} placeholder='Hi, Artem'/>
 
-            <button className='send' onClick={newMessage}><FontAwesomeIcon icon={faPaperPlane} />  </button>  
+            <button><FontAwesomeIcon icon={faMicrophone} className='TemporaryMicrophoneIcon'/></button>
+
+            <button className='send' onClick={newMessage}><FontAwesomeIcon icon={faPaperPlane} />  </button> 
         
           </div>
 

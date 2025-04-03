@@ -4,6 +4,7 @@ import React from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import { IoCheckmarkDoneOutline } from "react-icons/io5";
 
 
 const Message = (props) => {
@@ -19,6 +20,9 @@ const Message = (props) => {
           <div className='name-time'>
             {/* <p className={`name name-${props.name}`}>{props.name}</p> */}
             <p className="time">{props.time}</p>
+          </div>
+          <div className='checkIcon'>
+          <IoCheckmarkDoneOutline />
           </div>
         </div>
       </div>
