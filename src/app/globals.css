@@ -72,7 +72,6 @@ body {
     align-items: end;
     font-size: 17px;
     font-weight: bold;
-    margin-left: -52px;
 }
 
 .time {
@@ -237,15 +236,13 @@ main{
 
 .message {
     display: flex;
-   /* justify-content: space-between;
-    */
+
     gap: 15px;
-    width: 300px;
-    height: 40px;
+
     border-radius: 11px;
     background-color: #4fd84abb;
-    margin-left: 45px;
-    flex-direction: row;
+
+
 }
 
 .send {
@@ -290,19 +287,20 @@ main{
 
 .icon-Test{
     display: flex;
-    margin-left: -37px;
+    margin-left: px;
     border-radius: 2px;
     height: 30px;
     width: 30px;
     background-color: #c5df1e;
     border-radius: 50%;
-    align-items: center;
+
     margin-top: 5px;
 }
 
 .checkIcon{
     display: flex;
-    align-items: end;
+    align-items: flex-end;
+    justify-content: flex-end;
     font-size: 15px;
 }
 
@@ -311,5 +309,26 @@ main{
     align-items: flex-start;
     font-size: 15px;
     color: #282828;
+
+}
+
+.name-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+
+}
+
+.checkIcon-time{
+    display: flex;
+    align-items: flex-end;
+
+
+}
+
+.messages{
+    display: flex;
+    gap: 10px;
 
 }

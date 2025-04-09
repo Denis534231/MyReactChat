@@ -10,7 +10,7 @@ import { faUserSecret } from "@fortawesome/free-solid-svg-icons";
 
 import { faUserNinja } from "@fortawesome/free-solid-svg-icons";
 
-import Message from "../MyMessages";
+import Message from "../Message";
 
 export default function ChatWithAlex() {
 

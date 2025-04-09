@@ -6,37 +6,13 @@ import { useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { faUser } from "@fortawesome/free-solid-svg-icons";
-
-import { faUserSecret } from "@fortawesome/free-solid-svg-icons";
-
-import { faUserNinja } from "@fortawesome/free-solid-svg-icons";
-
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
-
-import { faSquarePlus } from "@fortawesome/free-solid-svg-icons";
+import { faUserSecret, faUserNinja, faUser, faPaperPlane, faSquarePlus } from "@fortawesome/free-solid-svg-icons";
 
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
 
-import { faMicrophone } from "@fortawesome/free-solid-svg-icons";
-
-import Message from "../MyMessages";
+import Message from "../Message";
 
 export default function ChatWithArtem() {
-  const newMessage = () => {
-    const timeNow = new Date().toLocaleTimeString();
-    setMessages([
-      ...Messages,
-      { text: inputValue, name: SecondInputValue, time: timeNow },
-    ]);
-    setInputValue("");
-  };
-
-  const change = (event) => {
-    setInputValue(event.target.value);
-  };
-
-  const addPhoto = () => {};
 
   const [Messages, setMessages] = useState([
     { name: "Arteem", time: "9:22", text: "Hello, Denys" },
@@ -53,6 +29,25 @@ export default function ChatWithArtem() {
   const [inputValue, setInputValue] = useState("");
 
   const [SecondInputValue, setSecondInputValue] = useState("");
+
+  const newMessage = () => {
+    const timeNow = new Date().toLocaleTimeString();
+    setMessages([
+      ...Messages,
+      { text: inputValue, name: SecondInputValue, time: timeNow },
+    ]);
+    setInputValue("");
+  };
+
+  const change = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const handleEnterKey = (e) => {
+    if (e.key === 'Enter') {
+      newMessage()
+    }
+  }
 
   return (
     <>
@@ -76,7 +71,7 @@ export default function ChatWithArtem() {
           );
         })}
         <div className="btn_ipt">
-          <button className="plus" onClick={addPhoto}>
+          <button className="plus" >
             <FontAwesomeIcon icon={faSquarePlus} />
           </button>
 
@@ -86,6 +81,7 @@ export default function ChatWithArtem() {
             value={inputValue}
             onChange={change}
             placeholder="Hi, Artem"
+            onKeyDown={handleEnterKey}
           />
 
           <button className="send" onClick={newMessage}>
