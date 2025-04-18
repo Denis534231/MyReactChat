@@ -12,6 +12,9 @@ import { IoCheckmarkDoneOutline } from "react-icons/io5";
 
 import Message from "../Message";
 
+import Header from "../components/Header";
+
+
 export default function ChatWithArtem() {
 
   const [Messages, setMessages] = useState([
@@ -31,6 +34,7 @@ export default function ChatWithArtem() {
   const [SecondInputValue, setSecondInputValue] = useState("");
 
   const newMessage = () => {
+    if (!inputValue.trim()) return;
     const timeNow = new Date().toLocaleTimeString();
     setMessages([
       ...Messages,
@@ -40,7 +44,7 @@ export default function ChatWithArtem() {
   };
 
   const change = (event) => {
-    setInputValue(event.target.value);
+    setInputValue(event.target.value.trim());
   };
 
   const handleEnterKey = (e) => {
@@ -52,16 +56,13 @@ export default function ChatWithArtem() {
   return (
     <>
       <div className="container">
-        <div className="hat">
-          <FontAwesomeIcon icon={faUser} className="TemporaryDenysIcon" />
-
-          <p className="TemporaryDenysName">Artem</p>
-        </div>
+        <Header/>
 
         {Messages.map(function (Iteration, index) {
           return (
-            <div key={index}>
+            <div>
               <Message
+                key={index}
                 name={"Artem"}
                 text={Iteration.text}
                 icon={faUser}

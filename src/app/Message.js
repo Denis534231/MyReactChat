@@ -19,9 +19,7 @@ const Message = (props) => {
             <p className="text">{props.text}</p>
         </div>
           <div className='checkIcon-time'>
-  
             <p className="time">{props.time}</p>
-
             <IoCheckmarkDoneOutline />
           </div>
         </div>
