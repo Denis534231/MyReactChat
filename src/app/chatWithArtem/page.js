@@ -29,6 +29,8 @@ export default function ChatWithArtem() {
     { name: "Denys", time: "9:23", text: "I feel great, yes, I'm free" }
   ]);
 
+
+
   const [inputValue, setInputValue] = useState("");
 
   const [SecondInputValue, setSecondInputValue] = useState("");
@@ -40,23 +42,24 @@ export default function ChatWithArtem() {
       ...Messages,
       { text: inputValue, name: SecondInputValue, time: timeNow },
     ]);
-    setInputValue("");
+    setInputValue(""); 
   };
 
   const change = (event) => {
-    setInputValue(event.target.value.trim());
+    setInputValue(event.target.value);
   };
 
   const handleEnterKey = (e) => {
     if (e.key === 'Enter') {
       newMessage()
     }
-  }
+  }   
 
   return (
     <>
       <div className="container">
         <Header/>
+      <div className="message-container">            
 
         {Messages.map(function (Iteration, index) {
           return (
@@ -69,8 +72,11 @@ export default function ChatWithArtem() {
                 time={Iteration.time}
               />
             </div>
+
           );
+          
         })}
+        </div>
         <div className="btn_ipt">
           <button className="plus" >
             <FontAwesomeIcon icon={faSquarePlus} />

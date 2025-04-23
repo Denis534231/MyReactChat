@@ -332,3 +332,15 @@ main{
     gap: 10px;
 
 }
+
+.hat{
+    position: fixed;
+}
+
+.message-container{
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+    padding-top: 60px;
+
+}
