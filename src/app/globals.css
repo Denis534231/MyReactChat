@@ -41,6 +41,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 46px;
+    
 }
 
 /* .containr{
@@ -344,3 +345,15 @@ main{
     padding-top: 60px;
 
 }
+
+/* .scroll-area {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-bottom: 110px;
+} */
+
+/* .chat-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+} */

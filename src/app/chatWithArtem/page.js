@@ -37,10 +37,12 @@ export default function ChatWithArtem() {
 
   const newMessage = () => {
     if (!inputValue.trim()) return;
-    const timeNow = new Date().toLocaleTimeString();
+    const timeNow = new Date();
+    const hours = timeNow.getHours();
+    const minutes = timeNow.getMinutes();
     setMessages([
       ...Messages,
-      { text: inputValue, name: SecondInputValue, time: timeNow },
+      { text: inputValue, name: SecondInputValue, time: `${hours}:${minutes}` },
     ]);
     setInputValue(""); 
   };
@@ -59,6 +61,7 @@ export default function ChatWithArtem() {
     <>
       <div className="container">
         <Header/>
+        <div className="message-container">
       <div className="message-container">            
 
         {Messages.map(function (Iteration, index) {
@@ -76,7 +79,8 @@ export default function ChatWithArtem() {
           );
           
         })}
-        </div>
+
+        </div></div>
         <div className="btn_ipt">
           <button className="plus" >
             <FontAwesomeIcon icon={faSquarePlus} />
