@@ -59,10 +59,10 @@ export default function ChatWithArtem() {
 
   return (
     <>
-      <div className="container">
+     <div className="chat-wrapper">
         <Header/>
-        <div className="message-container">
-      <div className="message-container">            
+        <div className="messages-container">
+           
 
         {Messages.map(function (Iteration, index) {
           return (
@@ -80,7 +80,8 @@ export default function ChatWithArtem() {
           
         })}
 
-        </div></div>
+        </div>
+        <div className="footer">
         <div className="btn_ipt">
           <button className="plus" >
             <FontAwesomeIcon icon={faSquarePlus} />
@@ -99,7 +100,8 @@ export default function ChatWithArtem() {
             <FontAwesomeIcon icon={faPaperPlane} />{" "}
           </button>
         </div>
-      </div>
+        </div>
+        </div>
     </>
   );
 }
