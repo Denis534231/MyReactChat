@@ -1,10 +1,10 @@
-import "../globals.css";
+import "../app/globals.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 
-const Header = () => {
+const ChatHeader = () => {
     
   return (
 
@@ -20,4 +20,4 @@ const Header = () => {
 
 };
 
-export default Header;
+export default ChatHeader;

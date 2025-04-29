@@ -4,16 +4,36 @@ import "./globals.css";
 
 import Link from "next/link";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { faUser, faGear } from "@fortawesome/free-solid-svg-icons";
+
 export default function Sidebar() {
   return (
-    <div className="container"> 
-      <h1>Select</h1>
+    <div className="sidebar">
+      <div className="sidebarHat">
+        <FontAwesomeIcon icon={faUser} className="sidebarUserIcon" />
 
-      <Link href="/">Home</Link>
+        <p className="sidebarUserName">Denchik</p>
+      </div>
 
-      <Link href="/directMessages">Chats</Link>
+      <div className="sideBarLinks-Settings">
+        
+        <div className="sideBarLinks">
+          <Link href="/" className="sideBarLink">Home</Link>
 
-      <Link href="/groups">Groups</Link>
+          <Link href="/directMessages" className="sideBarLink">Chats</Link>
+
+          <Link href="/groups" className="sideBarLink">Groups</Link>
+        </div>
+
+        <Link href="/settings" className="sideBarSettings">
+            <FontAwesomeIcon icon={faGear} className="sideBarSettingsIcon" />
+            <p className="sideBarSettingsLink">Settings</p>
+        </Link>
+
+        </div>
     </div>
+
   );
 }

@@ -164,23 +164,16 @@ p{
     transform: scale(1.2);
 }
 
-/* .sidebar{
-    width: 200px;
-    height: 100vh;
-    background-color: #0040ff;
-    padding: 20px;
-}
-
-.layout{
+/* .layout{
     display: flex;
 }
 
 main{
     flex-grow: 1;
     background-color: #ff0040;
-}
+} */
 
-*/
+
 .hat{
     display: flex;
     width: 100%;
@@ -199,6 +192,7 @@ main{
     background-color: #c5df1e;
     border-radius: 50%;
 }
+
 
 .TemporaryDenysName{
     font-size: 60px;
@@ -228,7 +222,7 @@ main{
     gap: 15px;
 
     border-radius: 11px;
-    background-color: #4fd84abb;
+    background-color: #67c67adb;
 
 
 }
@@ -343,8 +337,8 @@ main{
     gap: 46px;
     /* padding-top: 60px; */
     overflow: auto;
-    border: 2px, solid black;
-    border-style: solid;
+    /* border: 2px, solid black;
+    border-style: solid; */
     /* max-height: 300px; */
     flex: 1;
     /* overflow-y: auto; */
@@ -366,7 +360,125 @@ main{
 .footer{
     display: flex;
 
-
-      
-      
 }
+
+.sidebar{
+    display: flex;
+    width: 200px;
+    height: 100vh;
+    background-color: #6d6d6d;
+    flex-direction: column;
+    gap: 46px;
+    padding: 10px;
+    align-items: flex-start;
+    
+
+}
+
+.sidebarUserIcon{
+    font-size: 50px;
+
+    width: 60px;
+    height: 60px;
+    background-color: #1edf9f;
+    border-radius: 50%;
+    
+}
+
+.sidebarHat{
+
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    /* border: 32px, solid;
+    border-color: #0040ff;
+    border-style: solid; */
+    margin-top: 10px;
+
+}
+
+.sidebarUserName{
+
+    font-size: 33px;
+    font-weight: bold;
+
+}
+
+.sideBarSettings{
+    display: flex;
+    flex-direction: row;
+    /* border: 3px solid;
+    border-color: #0040ff; */
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    /* margin-top: auto; */
+    /* padding-bottom: 10px; */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.sideBarSettings:hover{
+    color: #474746; 
+    transform: scale(1.2); 
+}
+
+.sideBarSettingsIcon{
+    font-size: 60px;
+    color: #000000;
+    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.sideBarSettingsIcon:hover {
+    color: #474746; 
+    transform: scale(1.2); 
+   
+}
+/* .sideBarSettingsName{
+    font-weight: bold;
+    font-size: 33px;
+} */
+
+.sideBarLink{
+    color: #b3e5fc; 
+    text-decoration: none;
+    transition: color 0.3s, text-shadow 0.3s, transform 0.00000000001s ease;
+
+  }
+
+.sideBarLink:hover {
+    color: #e1f5fe; 
+    text-shadow: 0 0 5px #6ebfe5; 
+    
+  }
+
+.sideBarLink:active {
+   color: #414932;
+   transform: scale(0.95); 
+  }
+
+  .sideBarLinks-Settings{
+    display: flex;
+    flex-direction: column;
+    gap: 330px;
+    text-decoration: none;
+  }
+
+  .sideBarLinks{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 25px;
+    text-decoration: none;
+  }
+
+.sideBarSettingsLink{
+
+    font-weight: bold;
+    font-size: 33px;
+    text-decoration: none;
+    color: #251a44;
+    
+
+  }

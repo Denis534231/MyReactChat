@@ -12,7 +12,8 @@ import { IoCheckmarkDoneOutline } from "react-icons/io5";
 
 import Message from "../Message";
 
-import Header from "../components/Header";
+import ChatHeader from "@/components/ChatHeader";
+
 
 
 export default function ChatWithArtem() {
@@ -60,7 +61,7 @@ export default function ChatWithArtem() {
   return (
     <>
      <div className="chat-wrapper">
-        <Header/>
+        <ChatHeader/>
         <div className="messages-container">
            
 
@@ -72,6 +73,7 @@ export default function ChatWithArtem() {
                 name={"Artem"}
                 text={Iteration.text}
                 icon={faUser}
+              
                 time={Iteration.time}
               />
             </div>
