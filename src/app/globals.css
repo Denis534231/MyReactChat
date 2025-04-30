@@ -415,13 +415,13 @@ main{
     gap: 15px;
     /* margin-top: auto; */
     /* padding-bottom: 10px; */
-    transition: color 0.3s ease, transform 0.3s ease;
+
+
 }
 
-.sideBarSettings:hover{
+/* .sideBarSettings:hover{
     color: #474746; 
-    transform: scale(1.2); 
-}
+} */
 
 .sideBarSettingsIcon{
     font-size: 60px;
@@ -478,7 +478,17 @@ main{
     font-weight: bold;
     font-size: 33px;
     text-decoration: none;
-    color: #251a44;
-    
+    color: #b3ccd5;
+    transition: color 0.2s, text-shadow 0.2s, transform 0.2s ease;
 
   }
+
+  .sideBarSettingsLink:hover{
+    color: #e1f5fe; 
+    text-shadow: 0 0 5px #6ebfe5; 
+  }
+  a {
+    text-decoration: none;
+
+  }
+  
