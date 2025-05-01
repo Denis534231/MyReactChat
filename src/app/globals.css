@@ -346,11 +346,6 @@ main{
 
 }
 
-/* .scroll-area {
-    flex-grow: 1;
-    overflow-y: auto;
-    padding-bottom: 110px;
-} */
 
 .chat-wrapper {
     display: flex;
@@ -362,6 +357,10 @@ main{
 
 }
 
+a {
+    text-decoration: none;
+  }
+
 .sidebar{
     display: flex;
     width: 200px;
@@ -371,22 +370,23 @@ main{
     gap: 46px;
     padding: 10px;
     align-items: flex-start;
-    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.6s ease;
 
 }
 
-.sidebarUserIcon{
-    font-size: 50px;
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(-200px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
 
-    width: 60px;
-    height: 60px;
-    background-color: #1edf9f;
-    border-radius: 50%;
-    
-}
-
-.sidebarHat{
-
+  .sidebarHat{
     display: flex;
     gap: 15px;
     align-items: center;
@@ -395,15 +395,77 @@ main{
     border-color: #0040ff;
     border-style: solid; */
     margin-top: 10px;
-
 }
+
+  .sidebarUserIcon {
+    font-size: 50px;
+    border: 2px solid #8ebbc8;
+    width: 60px;
+    height: 60px;
+    background-color: #1edf9f;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+.sidebarUserIcon:hover {
+    background-color: #19c18c;
+    transform: scale(1.1) ;
+
+  }
+
+  .sidebarUserIcon:active {
+    transform: scale(0.95);
+
+  }
 
 .sidebarUserName{
 
     font-size: 33px;
     font-weight: bold;
-
+    transition: color 0.3s, text-shadow 0.3s, transform 0.3s ease;
 }
+
+  .sidebarUserName:hover {
+    color: #1edf9f;
+    text-shadow: 0 0 5px #1edf9f;
+    transform: scale(1.090) ;
+
+  }
+
+
+.sideBarLinks-Settings{
+    display: flex;
+    flex-direction: column;
+    gap: 330px;
+    text-decoration: none;
+  }
+
+  .sideBarLinks{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 25px;
+    text-decoration: none;
+  }
+  
+.sideBarLink{
+    color: #b3e5fc; 
+    text-decoration: none;
+    transition: color 0.3s, text-shadow 0.3s, transform 0.00000000001s ease;
+
+  }
+
+.sideBarLink:hover {
+    color: #e1f5fe; 
+    text-shadow: 0 0 5px #6ebfe5; 
+    
+  }
+
+.sideBarLink:active {
+   color: #414932;
+   transform: scale(0.95); 
+  }
+
 
 .sideBarSettings{
     display: flex;
@@ -426,52 +488,20 @@ main{
 .sideBarSettingsIcon{
     font-size: 60px;
     color: #000000;
-    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    transition: color 0.3s, text-shadow 0.3s, transform 0.00000000001s ease;
 
 }
 
 .sideBarSettingsIcon:hover {
-    color: #474746; 
-    transform: scale(1.2); 
+    transform: rotate(360deg);
+    transition: transform 0.8s ease;
    
 }
-/* .sideBarSettingsName{
-    font-weight: bold;
-    font-size: 33px;
-} */
 
-.sideBarLink{
-    color: #b3e5fc; 
-    text-decoration: none;
-    transition: color 0.3s, text-shadow 0.3s, transform 0.00000000001s ease;
-
-  }
-
-.sideBarLink:hover {
-    color: #e1f5fe; 
-    text-shadow: 0 0 5px #6ebfe5; 
-    
-  }
-
-.sideBarLink:active {
-   color: #414932;
-   transform: scale(0.95); 
-  }
-
-  .sideBarLinks-Settings{
-    display: flex;
-    flex-direction: column;
-    gap: 330px;
-    text-decoration: none;
-  }
-
-  .sideBarLinks{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    font-size: 25px;
-    text-decoration: none;
-  }
+.sideBarSettingsIcon:active {
+    transform: scale(0.9);
+    transition: transform 0.1s ease;
+}
 
 .sideBarSettingsLink{
 
@@ -483,12 +513,15 @@ main{
 
   }
 
-  .sideBarSettingsLink:hover{
+.sideBarSettingsLink:hover{
     color: #e1f5fe; 
     text-shadow: 0 0 5px #6ebfe5; 
-  }
-  a {
-    text-decoration: none;
-
+    
   }
   
+.sideBarSettingsLink:active {
+    color: #414932;
+    transform: scale(0.95); 
+
+   }
+
