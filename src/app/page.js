@@ -1,39 +1,11 @@
 "use client";
 
-import "./globals.css";
+import Sidebar from "@/components/SideBar";
 
-import Link from "next/link";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import { faUser, faGear } from "@fortawesome/free-solid-svg-icons";
-
-export default function Sidebar() {
+export default function App() {
   return (
-    <div className="sidebar">
-      <div className="sidebarHat">
-        <FontAwesomeIcon icon={faUser} className="sidebarUserIcon" />
-
-        <p className="sidebarUserName">Denchik</p>
-      </div>
-
-      <div className="sideBarLinks-Settings">
-        
-        <div className="sideBarLinks">
-          <Link href="/" className="sideBarLink">Home</Link>
-
-          <Link href="/directMessages" className="sideBarLink">Chats</Link>
-
-          <Link href="/groups" className="sideBarLink">Groups</Link>
-        </div>
-
-        <Link href="/settings" className="sideBarSettings">
-            <FontAwesomeIcon icon={faGear} className="sideBarSettingsIcon" />
-            <p className="sideBarSettingsLink">Settings</p>
-        </Link>
-
-        </div>
-    </div>
-
+   <>
+   <Sidebar/>
+   </>
   );
 }

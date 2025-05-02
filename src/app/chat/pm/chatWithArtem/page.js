@@ -10,7 +10,7 @@ import { faUserSecret, faUserNinja, faUser, faPaperPlane, faSquarePlus } from "@
 
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
 
-import Message from "../Message";
+import Message from "@/components/Message";
 
 import ChatHeader from "@/components/ChatHeader";
 

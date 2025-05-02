@@ -8,11 +8,8 @@ export default function directMesssages() {
 return(
   <div className='container'>
     
-  <Link href="/chatWithAlex">Alex</Link>
+  <Link href="/chat/pm/Artem">link</Link>
 
-  <Link href="/chatWithArtem">Artem</Link>
-
-  <Link href="/chatWithDennis">Dennis</Link>
   </div>
     )
     
