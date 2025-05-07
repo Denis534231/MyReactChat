@@ -1,47 +1,46 @@
 body {
-    background-color: #5d789f;
-    margin: 0;
+  background-color: #5d789f;
+  margin: 0;
 }
 
-.Denis{
-    font-size: 20px;
-    font-weight:bold;
-    font-style:italic;
-    font-weight:900;
-    letter-spacing: 1px;
-    text-shadow: 1px 1px 1px #0040ff;
-    display: block;
-    margin-left: -122px;
-    transition: color 0.4s ease, transform 0.4s ease;
+.Denis {
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 1px #0040ff;
+  display: block;
+  margin-left: -122px;
+  transition: color 0.4s ease, transform 0.4s ease;
 }
 
-.Alex{
-    font-size: 20px;
-    font-weight:bold;
-    font-style:italic;
-    font-weight:900;
-    letter-spacing: 1px;
-    text-shadow: 1px 1px 1px #0040ff;
-    display: block;
-    margin-left: -113px;
-    transition: color 0.4s ease, transform 0.4s ease;
+.Alex {
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 1px #0040ff;
+  display: block;
+  margin-left: -113px;
+  transition: color 0.4s ease, transform 0.4s ease;
 }
 
-.icon-Denis{
-    color: #000000;
-    transition: color 0.4s ease, transform 0.4s ease;
+.icon-Denis {
+  color: #000000;
+  transition: color 0.4s ease, transform 0.4s ease;
 }
 
-.icon-Alex{
-    color: #000000;
-    transition: color 0.4s ease, transform 0.4s ease;
+.icon-Alex {
+  color: #000000;
+  transition: color 0.4s ease, transform 0.4s ease;
 }
 
-.container{
-    display: flex;
-    flex-direction: column;
-    gap: 46px;
-    
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
 }
 
 /* .containr{
@@ -63,38 +62,39 @@ body {
 
 */
 .icon-name {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .text {
-    display: flex;
-    align-items: end;
-    font-size: 17px;
-    font-weight: bold;
+  display: flex;
+  align-items: end;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 .time {
-    font-size: 0.9rem;
-    color: #242424;
-    text-shadow: 1px 1px 5px #ffee00;
-    transition: color 0.4s ease, transform 0.4s ease;
+  font-size: 0.9rem;
+  color: #242424;
+  text-shadow: 1px 1px 5px #ffee00;
+  transition: color 0.4s ease, transform 0.4s ease;
 }
 
 .time:hover {
-    color: #ffffff;
-    transform: scale(1.2);
+  color: #ffffff;
+  transform: scale(1.2);
 }
 
-p{
-    margin: 0;
+p {
+  margin: 0;
 }
 
-.icon-Denis, .icon-Alex{
-    font-size: 40px;
-    width: 40px;
-    height: 40px;
+.icon-Denis,
+.icon-Alex {
+  font-size: 40px;
+  width: 40px;
+  height: 40px;
 }
 
 /* .name{
@@ -105,63 +105,63 @@ p{
     transition: color 0.4s ease, transform 0.4s ease;
 } */
 
-.name-Denis:hover{
-    transform: scale(1.1);
-    color: #ff0000;
+.name-Denis:hover {
+  transform: scale(1.1);
+  color: #ff0000;
 }
 
-.name-Alex:hover{
-    transform: scale(1.1);
-    color: #7bff00;
+.name-Alex:hover {
+  transform: scale(1.1);
+  color: #7bff00;
 }
 
 .name-time {
-    display: flex;
-    align-items: end;
-    gap: 24px;
+  display: flex;
+  align-items: end;
+  gap: 24px;
 }
 
 .icon-Denis:hover {
-    color: #ff0000;
-    transform: scale(1.3);
+  color: #ff0000;
+  transform: scale(1.3);
 }
 
 .icon-Alex:hover {
-    color: #7bff00;
-    transform: scale(1.3);
+  color: #7bff00;
+  transform: scale(1.3);
 }
 
-.Denis:hover{
-    color: #ff0000;
-    transform: scale(1.1);
+.Denis:hover {
+  color: #ff0000;
+  transform: scale(1.1);
 }
 
-.Alex:hover{
-    color: #7bff00;
-    transform: scale(1.1);
+.Alex:hover {
+  color: #7bff00;
+  transform: scale(1.1);
 }
 
-.input{
-    background-color: #413f3f9f;
-    border-radius: 5px;
-    font-size: large;
-    width: 500px;
+.input {
+  background-color: #413f3f9f;
+  border-radius: 5px;
+  font-size: large;
+  width: 500px;
 }
 
-.button{
-    color: #000000;
-    background-size: 1;
-    font-size: large;
-    width: 200px;
-    border-radius: 122px;
-    padding: 10px 20px;
-    text-shadow: 1px 1px 1px #11e97adc;
-    transition: color 0.4s ease, transform 0.9s ease;
+.button {
+  color: #000000;
+  background-size: 1;
+  font-size: large;
+  width: 200px;
+  border-radius: 122px;
+  padding: 10px 20px;
+  text-shadow: 1px 1px 1px #11e97adc;
+  transition: color 0.4s ease, transform 0.9s ease;
 }
 
-.button:hover{
-    color: #ff0000;
-    transform: scale(1.2);
+.button:hover {
+  color: #ff0000;
+  transform: scale(1.2);
 }
 
 /* .layout{
@@ -173,356 +173,387 @@ main{
     background-color: #ff0040;
 } */
 
-
-.hat{
-    display: flex;
-    width: 100%;
-    height: 100px;
-    background-color: rgb(153, 151, 151);
-    align-items: center;
-    flex-direction: row;
-    gap: 30px;
+.hat {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background-color: rgb(153, 151, 151);
+  align-items: center;
+  flex-direction: row;
+  gap: 30px;
 }
 
-.TemporaryDenysIcon{
-    font-size: 80px;
-    margin-left: 40px;
-    width: 60px;
-    height: 60px;
-    background-color: #c5df1e;
-    border-radius: 50%;
+.TemporaryDenysIcon {
+  font-size: 80px;
+  margin-left: 40px;
+  width: 60px;
+  height: 60px;
+  background-color: #c5df1e;
+  border-radius: 50%;
 }
 
-
-.TemporaryDenysName{
-    font-size: 60px;
+.TemporaryDenysName {
+  font-size: 60px;
 }
 
-.textField{
-    width: 100%;
-    height: 100px;
-    background-color: rgb(237, 112, 112);
+.textField {
+  width: 100%;
+  height: 100px;
+  background-color: rgb(237, 112, 112);
 }
 
-.inputArtem{
-    background-color: #ffffff9f;
-    border-radius: 15px;
-    font-size: xx-large;
-    width: 1000px;
+.inputArtem {
+  background-color: #ffffff9f;
+  border-radius: 15px;
+  font-size: xx-large;
+  width: 1000px;
 }
 
-.inputArtem::placeholder{
-    color: #000000ab;
-    font-size: x-large;
+.inputArtem::placeholder {
+  color: #000000ab;
+  font-size: x-large;
 }
 
 .message {
-    display: flex;
+  display: flex;
 
-    gap: 15px;
+  gap: 15px;
 
-    border-radius: 11px;
-    background-color: #67c67adb;
-
-
+  border-radius: 11px;
+  background-color: #67c67adb;
 }
 
 .send {
-    color: #060000;
-    background: none;
-    border: none;
-    font-size: xx-large;
-    border-radius: 122px;
-    padding: 10px 15px;
-    transition: color 0.3s ease, transform 0.3s ease-in-out;
+  color: #060000;
+  background: none;
+  border: none;
+  font-size: xx-large;
+  border-radius: 122px;
+  padding: 10px 15px;
+  transition: color 0.3s ease, transform 0.3s ease-in-out;
 }
 
-.plus{
-    color: #000000;
-    background-size: 0;
-    background: none;
-    border: none;
-    font-size: xx-large;
-    border-radius: 122px;
-    padding: 10px 15px;
-    text-shadow: 1px 1px 1px #11e97adc;
-    transition: color 0.3s ease, transform 0.3s ease-in-out;
+.plus {
+  color: #000000;
+  background-size: 0;
+  background: none;
+  border: none;
+  font-size: xx-large;
+  border-radius: 122px;
+  padding: 10px 15px;
+  text-shadow: 1px 1px 1px #11e97adc;
+  transition: color 0.3s ease, transform 0.3s ease-in-out;
 }
 
-.plus:hover{
-    color: #414932;
-    transform: scale(1.5);
+.plus:hover {
+  color: #414932;
+  transform: scale(1.5);
 }
 
-.plus:active{
-    transform: scale(0.6);
+.plus:active {
+  transform: scale(0.6);
 }
 
-.send:hover{
-    color: #414932;
-    transform: scale(1.5);
+.send:hover {
+  color: #414932;
+  transform: scale(1.5);
 }
 
-.send:active{
-    transform: scale(0.6);
+.send:active {
+  transform: scale(0.6);
 }
 
-.icon-Test{
-    display: flex;
-    margin-left: px;
-    border-radius: 2px;
-    height: 30px;
-    width: 30px;
-    background-color: #c5df1e;
-    border-radius: 50%;
+.icon-Test {
+  display: flex;
+  margin-left: px;
+  border-radius: 2px;
+  height: 30px;
+  width: 30px;
+  background-color: #c5df1e;
+  border-radius: 50%;
 
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
-.checkIcon{
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    font-size: 15px;
+.checkIcon {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: 15px;
 }
 
-.name{
-    display: flex;
-    align-items: flex-start;
-    font-size: 15px;
-    color: #282828;
-
+.name {
+  display: flex;
+  align-items: flex-start;
+  font-size: 15px;
+  color: #282828;
 }
 
-.name-text{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    
-
+.name-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.checkIcon-time{
-    display: flex;
-    align-items: flex-end;
-
-
+.checkIcon-time {
+  display: flex;
+  align-items: flex-end;
 }
 
-.messages{
-    display: flex;
-    gap: 10px;
-
-
+.messages {
+  display: flex;
+  gap: 10px;
 }
 
-.hat{
-    /* position: fixed; */
+.hat {
+  /* position: fixed; */
 }
 
-.btn_ipt{
-    display: flex;
-    gap: 50px;
-    justify-content: space-between;
-    width: 100%;
-    height: 100px;
-    background-color: rgb(203, 203, 203);
-    align-items: center;
-    flex-direction: row;
+.btn_ipt {
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  width: 100%;
+  height: 100px;
+  background-color: rgb(203, 203, 203);
+  align-items: center;
+  flex-direction: row;
 }
 
-.messages-container{
-    display: flex;
-    flex-direction: column;
-    gap: 46px;
-    /* padding-top: 60px; */
-    overflow: auto;
-    /* border: 2px, solid black;
+.messages-container {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+  /* padding-top: 60px; */
+  overflow: auto;
+  /* border: 2px, solid black;
     border-style: solid; */
-    /* max-height: 300px; */
-    flex: 1;
-    /* overflow-y: auto; */
-    padding: 20px;
-
+  /* max-height: 300px; */
+  flex: 1;
+  /* overflow-y: auto; */
+  padding: 20px;
 }
-
 
 .chat-wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
-.footer{
-    display: flex;
-
+.footer {
+  display: flex;
 }
 
 a {
-    text-decoration: none;
-  }
-
-.sidebar{
-    display: flex;
-    width: 200px;
-    height: 100vh;
-    background-color: #6d6d6d;
-    flex-direction: column;
-    gap: 46px;
-    padding: 10px;
-    align-items: flex-start;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    animation: fadeIn 0.6s ease;
-
-
+  text-decoration: none;
 }
 
-@keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateX(-200px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0px);
-    }
-  }
+.sidebar {
+  display: flex;
+  width: 200px;
+  height: 100vh;
+  background-color: #6d6d6d;
+  flex-direction: column;
+  gap: 46px;
+  padding: 10px;
+  align-items: flex-start;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* animation: fadeIn 0.6s ease; */
+}
 
-  .sidebarHat{
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    justify-content: center;
-    /* border: 32px, solid;
+/* @keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+} */
+
+.sidebarHat {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  /* border: 32px, solid;
     border-color: #0040ff;
     border-style: solid; */
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
-  .sidebarUserIcon {
-    font-size: 50px;
-    border: 2px solid #8ebbc8;
-    width: 60px;
-    height: 60px;
-    background-color: #1edf9f;
-    border-radius: 50%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
+.sidebarUserIcon {
+  font-size: 50px;
+  border: 2px solid #8ebbc8;
+  width: 60px;
+  height: 60px;
+  background-color: #1edf9f;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 .sidebarUserIcon:hover {
-    background-color: #19c18c;
-    transform: scale(1.1) ;
-
-  }
-
-  .sidebarUserIcon:active {
-    transform: scale(0.95);
-
-  }
-
-.sidebarUserName{
-
-    font-size: 33px;
-    font-weight: bold;
-    transition: color 0.3s, text-shadow 0.3s, transform 0.3s ease;
+  background-color: #19c18c;
+  transform: scale(1.1);
 }
 
-  .sidebarUserName:hover {
-    color: #1edf9f;
-    text-shadow: 0 0 5px #1edf9f;
-    transform: scale(1.090) ;
+.sidebarUserIcon:active {
+  transform: scale(0.95);
+}
 
-  }
+.sidebarUserName {
+  font-size: 33px;
+  font-weight: bold;
+  transition: color 0.3s, text-shadow 0.3s, transform 0.3s ease;
+}
 
+.sidebarUserName:hover {
+  color: #1edf9f;
+  text-shadow: 0 0 5px #1edf9f;
+  transform: scale(1.09);
+}
 
-.sideBarLinks-Settings{
-    display: flex;
-    flex-direction: column;
-    gap: 330px;
-    text-decoration: none;
-  }
+.sideBarLinks-Settings {
+  display: flex;
+  flex-direction: column;
+  gap: 330px;
+  text-decoration: none;
+}
 
-  .sideBarLinks{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    font-size: 25px;
-    text-decoration: none;
-  }
-  
-.sideBarLink{
-    color: #b3e5fc; 
-    text-decoration: none;
-    transition: color 0.3s, text-shadow 0.3s, transform 0.00000000001s ease;
+.sideBarLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-size: 25px;
+  text-decoration: none;
+}
 
-  }
+.sideBarLink {
+  color: #b3e5fc;
+  text-decoration: none;
+  transition: color 0.3s, text-shadow 0.3s, transform 0.00000000001s ease;
+  font-size: 25px;
+}
 
 .sideBarLink:hover {
-    color: #e1f5fe; 
-    text-shadow: 0 0 5px #6ebfe5; 
-    
-  }
+  color: #e1f5fe;
+  text-shadow: 0 0 5px #6ebfe5;
+}
 
 .sideBarLink:active {
-   color: #414932;
-   transform: scale(0.95); 
-  }
+  color: #414932;
+  transform: scale(0.95);
+}
 
-
-.sideBarSettings{
-    display: flex;
-    flex-direction: row;
-    /* border: 3px solid;
+.sideBarSettings {
+  display: flex;
+  flex-direction: row;
+  /* border: 3px solid;
     border-color: #0040ff; */
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
-    /* margin-top: auto; */
-    /* padding-bottom: 10px; */
-
-
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  /* margin-top: auto; */
+  /* padding-bottom: 10px; */
 }
 
 /* .sideBarSettings:hover{
     color: #474746; 
 } */
 
-.sideBarSettingsIcon{
-    font-size: 60px;
-    color: #000000;
-    transition: color 0.3s, text-shadow 0.3s, transform 0.00000000001s ease;
-
+.sideBarSettingsIcon {
+  font-size: 60px;
+  color: #000000;
+  transition: color 0.3s, text-shadow 0.3s, transform 0.00000000001s ease;
 }
 
 .sideBarSettingsIcon:hover {
-    transform: rotate(360deg);
-    transition: transform 0.8s ease;
-   
+  transform: rotate(360deg);
+  transition: transform 0.8s ease;
 }
 
 .sideBarSettingsIcon:active {
-    transform: scale(0.9);
-    transition: transform 0.1s ease;
+  transform: scale(0.9);
+  transition: transform 0.1s ease;
 }
 
-.sideBarSettingsLink{
+.sideBarSettingsLink {
+  font-weight: bold;
+  font-size: 33px;
+  text-decoration: none;
+  color: #b3ccd5;
+  transition: color 0.2s, text-shadow 0.2s, transform 0.2s ease;
+}
 
-    font-weight: bold;
-    font-size: 33px;
-    text-decoration: none;
-    color: #b3ccd5;
-    transition: color 0.2s, text-shadow 0.2s, transform 0.2s ease;
+.sideBarSettingsLink:hover {
+  color: #e1f5fe;
+  text-shadow: 0 0 5px #6ebfe5;
+}
 
-  }
-
-.sideBarSettingsLink:hover{
-    color: #e1f5fe; 
-    text-shadow: 0 0 5px #6ebfe5; 
-    
-  }
-  
 .sideBarSettingsLink:active {
-    color: #414932;
-    transform: scale(0.95); 
+  color: #414932;
+  transform: scale(0.95);
+}
 
-   }
+.currentComponent {
+  flex-grow: 1;
+  max-width: 63.8%;
+}
+.layout {
+  display: flex;
+  flex-direction: row;
+}
 
+.link-icon {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.sideBarIcon {
+  transition: color 0.3s, transform 0.3s ease;
+  color: #000000;
+}
+
+.sideBarIcon:hover {
+  color: #b3e5fc;
+}
+
+.sideBarIcon:active {
+  transform: scale(0.9);
+  transition: transform 0.1s ease;
+}
+
+/* <div className="messages-container">
+          {Messages.map(function (Iteration, index) {
+            return (
+              <div>
+                <Message
+                  key={index}
+                  name={"Artem"}
+                  text={Iteration.text}
+                  icon={faUser}
+                  time={Iteration.time}
+                />
+              </div>
+            );
+          })}
+        </div>
+        <div className="footer">
+          <div className="btn_ipt">
+            <button className="plus">
+              <FontAwesomeIcon icon={faSquarePlus} />
+            </button>
+
+            <input
+              className="inputArtem"
+              type="text"
+              value={inputValue}
+              onChange={change}
+              placeholder="Hi, Artem"
+              onKeyDown={handleEnterKey}
+            />
+
+            <button className="send" onClick={newMessage}>
+              <FontAwesomeIcon icon={faPaperPlane} />{" "}
+            </button> */

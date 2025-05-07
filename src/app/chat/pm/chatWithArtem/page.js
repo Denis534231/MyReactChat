@@ -6,7 +6,13 @@ import { useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { faUserSecret, faUserNinja, faUser, faPaperPlane, faSquarePlus } from "@fortawesome/free-solid-svg-icons";
+import {
+  faUserSecret,
+  faUserNinja,
+  faUser,
+  faPaperPlane,
+  faSquarePlus,
+} from "@fortawesome/free-solid-svg-icons";
 
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
 
@@ -14,10 +20,11 @@ import Message from "@/components/Message";
 
 import ChatHeader from "@/components/ChatHeader";
 
+import MessagesList from "@/components/MessagesList";
 
+import ChatFooter from "@/components/ChatFooter";
 
 export default function ChatWithArtem() {
-
   const [Messages, setMessages] = useState([
     { name: "Arteem", time: "9:22", text: "Hello, Denys" },
 
@@ -27,10 +34,8 @@ export default function ChatWithArtem() {
 
     { name: "Arteem", time: "9:22", text: "Are you free tomorrow?" },
 
-    { name: "Denys", time: "9:23", text: "I feel great, yes, I'm free" }
+    { name: "Denys", time: "9:23", text: "I feel great, yes, I'm free" },
   ]);
-
-
 
   const [inputValue, setInputValue] = useState("");
 
@@ -45,7 +50,7 @@ export default function ChatWithArtem() {
       ...Messages,
       { text: inputValue, name: SecondInputValue, time: `${hours}:${minutes}` },
     ]);
-    setInputValue(""); 
+    setInputValue("");
   };
 
   const change = (event) => {
@@ -53,57 +58,23 @@ export default function ChatWithArtem() {
   };
 
   const handleEnterKey = (e) => {
-    if (e.key === 'Enter') {
-      newMessage()
+    if (e.key === "Enter") {
+      newMessage();
     }
-  }   
+  };
 
   return (
     <>
-     <div className="chat-wrapper">
-        <ChatHeader/>
-        <div className="messages-container">
-           
-
-        {Messages.map(function (Iteration, index) {
-          return (
-            <div>
-              <Message
-                key={index}
-                name={"Artem"}
-                text={Iteration.text}
-                icon={faUser}
-              
-                time={Iteration.time}
-              />
-            </div>
-
-          );
-          
-        })}
-
-        </div>
-        <div className="footer">
-        <div className="btn_ipt">
-          <button className="plus" >
-            <FontAwesomeIcon icon={faSquarePlus} />
-          </button>
-
-          <input
-            className="inputArtem"
-            type="text"
-            value={inputValue}
-            onChange={change}
-            placeholder="Hi, Artem"
-            onKeyDown={handleEnterKey}
-          />
-
-          <button className="send" onClick={newMessage}>
-            <FontAwesomeIcon icon={faPaperPlane} />{" "}
-          </button>
-        </div>
-        </div>
-        </div>
+      <div className="chat-wrapper">
+        <ChatHeader />
+        <MessagesList Messages={Messages} />
+        <ChatFooter
+          inputValue={inputValue}
+          change={change}
+          handleEnterKey={handleEnterKey}
+          newMessage={newMessage}
+        />
+      </div>
     </>
   );
 }
