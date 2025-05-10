@@ -6,7 +6,7 @@ import { faPaperPlane, faSquarePlus } from "@fortawesome/free-solid-svg-icons";
 
 export default function ChatFooter({
   inputValue,
-  change,
+  handleChange,
   handleEnterKey,
   newMessage,
 }) {
@@ -20,7 +20,7 @@ export default function ChatFooter({
           className="inputArtem"
           type="text"
           value={inputValue}
-          onChange={change}
+          onChange={handleChange}
           placeholder="Hi, Artem"
           onKeyDown={handleEnterKey}
         />

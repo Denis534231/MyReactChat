@@ -416,7 +416,7 @@ a {
 .sideBarLinks-Settings {
   display: flex;
   flex-direction: column;
-  gap: 330px;
+  gap: 20px;
   text-decoration: none;
 }
 
@@ -450,9 +450,9 @@ a {
   flex-direction: row;
   /* border: 3px solid;
     border-color: #0040ff; */
-  justify-content: space-between;
+
   align-items: center;
-  gap: 15px;
+  gap: 23px;
   /* margin-top: auto; */
   /* padding-bottom: 10px; */
 }
@@ -524,36 +524,80 @@ a {
   transition: transform 0.1s ease;
 }
 
-/* <div className="messages-container">
-          {Messages.map(function (Iteration, index) {
-            return (
-              <div>
-                <Message
-                  key={index}
-                  name={"Artem"}
-                  text={Iteration.text}
-                  icon={faUser}
-                  time={Iteration.time}
-                />
-              </div>
-            );
-          })}
-        </div>
-        <div className="footer">
-          <div className="btn_ipt">
-            <button className="plus">
-              <FontAwesomeIcon icon={faSquarePlus} />
-            </button>
+.groups-section {
+  margin-bottom: 10px;
+}
 
-            <input
-              className="inputArtem"
-              type="text"
-              value={inputValue}
-              onChange={change}
-              placeholder="Hi, Artem"
-              onKeyDown={handleEnterKey}
-            />
+.toggle-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  font-size: 20px;
+  margin-left: 30px;
+}
 
-            <button className="send" onClick={newMessage}>
-              <FontAwesomeIcon icon={faPaperPlane} />{" "}
-            </button> */
+.arrow {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+.groups-content {
+  margin-left: 20px;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.opened {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-left: 10px;
+  color: #000000;
+}
+
+.groupsOpened-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 270px;
+}
+
+.addNewGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: 500;
+  transition: color 0.4s, text-shadow 0.4s, transform 0.001s ease;
+}
+
+.addNewGroup:active {
+  color: #414932;
+  transform: scale(0.95);
+}
+
+.addNewGroup:hover {
+  color: #e1f5fe;
+  text-shadow: 0 0 5px #568398;
+}
+.sideBarOpenedLink {
+  color: #000000;
+  transition: color 0.4s, text-shadow 0.4s, transform 0.001s ease;
+  font-size: 25px;
+}
+
+.sideBarOpenedLink:hover {
+  color: #e1f5fe;
+  text-shadow: 0 0 5px #568398;
+}
+
+.sideBarOpenedLink:active {
+  color: #414932;
+  transform: scale(0.95);
+}

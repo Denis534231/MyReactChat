@@ -25,7 +25,7 @@ import MessagesList from "@/components/MessagesList";
 import ChatFooter from "@/components/ChatFooter";
 
 export default function ChatWithArtem() {
-  const [Messages, setMessages] = useState([
+  const [messages, setMessages] = useState([
     { name: "Arteem", time: "9:22", text: "Hello, Denys" },
 
     { name: "Denys", time: "9:23", text: "Hello" },
@@ -47,13 +47,13 @@ export default function ChatWithArtem() {
     const hours = timeNow.getHours();
     const minutes = timeNow.getMinutes();
     setMessages([
-      ...Messages,
+      ...messages,
       { text: inputValue, name: SecondInputValue, time: `${hours}:${minutes}` },
     ]);
     setInputValue("");
   };
 
-  const change = (event) => {
+  const handleChange = (event) => {
     setInputValue(event.target.value);
   };
 
@@ -67,10 +67,10 @@ export default function ChatWithArtem() {
     <>
       <div className="chat-wrapper">
         <ChatHeader />
-        <MessagesList Messages={Messages} />
+        <MessagesList messages={messages} />
         <ChatFooter
           inputValue={inputValue}
-          change={change}
+          handleChange={handleChange}
           handleEnterKey={handleEnterKey}
           newMessage={newMessage}
         />

@@ -4,10 +4,10 @@ import React from "react";
 import Message from "@/components/Message";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 
-export default function MessagesList({ Messages }) {
+export default function MessagesList({ messages }) {
   return (
     <div className="messages-container">
-      {Messages.map((Iteration, index) => (
+      {messages.map((Iteration, index) => (
         <div key={index}>
           <Message
             name={"Artem"}
