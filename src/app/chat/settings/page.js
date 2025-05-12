@@ -1,20 +1,17 @@
-'use client'
+"use client";
 
-import React from 'react';
+import React from "react";
 
-import Link from 'next/link';
+import Link from "next/link";
 
-export default function directMesssages() {
-return(
-  <div className='container'>
+function directMesssages() {
+  return (
+    <div className="container">
+      <h1>Settings</h1>
 
-    <h1>Settings</h1>
-    
-  <Link href="/">Home</Link>
+      <Link href="/">Home</Link>
+    </div>
+  );
+}
 
-  </div>
-    )
-    
-  }
-  
-  
+export default directMesssages;

@@ -601,3 +601,13 @@ a {
   color: #414932;
   transform: scale(0.95);
 }
+
+.sidebar .active {
+  color: blue;
+  font-weight: bold;
+}
+
+.active {
+  color: blue;
+  font-weight: bold;
+}
