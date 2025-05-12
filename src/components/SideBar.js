@@ -1,11 +1,8 @@
 "use client";
 
 import "@/app/globals.css";
-
 import Link from "next/link";
-
 import { useState } from "react";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter } from "next/navigation";
 import {
@@ -15,9 +12,7 @@ import {
   faUserGroup,
   faMessage,
 } from "@fortawesome/free-solid-svg-icons";
-
 import { IoIosArrowDown } from "react-icons/io";
-
 import { IoIosArrowForward } from "react-icons/io";
 
 export default function Sidebar() {
@@ -37,17 +32,19 @@ export default function Sidebar() {
   } else {
     arrowIconGroups = <IoIosArrowForward />;
   }
+
+  const isActive = (path) => (router.pathname === path ? "active" : "");
+
   return (
     <div className="sidebar">
       <div className="sidebarHat">
         <FontAwesomeIcon icon={faUser} className="sidebarUserIcon" />
-
         <p className="sidebarUserName">Denchik</p>
       </div>
 
       <div className="sideBarLinks-Settings">
         <div className="sideBarLinks">
-          <Link href="/" className="link-icon">
+          <Link href="/" className={`link-icon ${isActive("/")}`}>
             <FontAwesomeIcon icon={faHouse} className="sideBarIcon" />
             <p className="sideBarLink">Home</p>
           </Link>
@@ -64,10 +61,18 @@ export default function Sidebar() {
           </div>
           {openChats && (
             <div className="opened">
-              <Link href="/chat/pm/Artem" className="sideBarOpenedLink">
+              <Link
+                href="/chat/pm/Artem"
+                className={`sideBarOpenedLink ${isActive("/chat/pm/Artem")}`}
+              >
                 link
               </Link>
-              <Link href="/chat/pm/chatWithArtem" className="sideBarOpenedLink">
+              <Link
+                href="/chat/pm/chatWithArtem"
+                className={`sideBarOpenedLink ${isActive(
+                  "/chat/pm/chatWithArtem"
+                )}`}
+              >
                 Artem
               </Link>
             </div>
@@ -96,7 +101,10 @@ export default function Sidebar() {
             </div>
           )}
 
-          <Link href="/chat/settings" className="sideBarSettings">
+          <Link
+            href="/chat/settings"
+            className={`sideBarSettings ${isActive("/chat/settings")}`}
+          >
             <FontAwesomeIcon icon={faGear} className="sideBarSettingsIcon" />
             <p className="sideBarSettingsLink">Settings</p>
           </Link>
