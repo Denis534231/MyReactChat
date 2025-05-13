@@ -497,7 +497,6 @@ a {
 
 .currentComponent {
   flex-grow: 1;
-  max-width: 63.8%;
 }
 .layout {
   display: flex;

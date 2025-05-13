@@ -4,7 +4,7 @@ import "@/app/globals.css";
 import Link from "next/link";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import {
   faUser,
   faGear,
@@ -32,8 +32,8 @@ export default function Sidebar() {
   } else {
     arrowIconGroups = <IoIosArrowForward />;
   }
-
-  const isActive = (path) => (router.pathname === path ? "active" : "");
+  const pathname = usePathname();
+  const isActive = (path) => (pathname === path ? "active" : "");
 
   return (
     <div className="sidebar">
@@ -94,7 +94,7 @@ export default function Sidebar() {
             <div className="opened">
               <button
                 onClick={() => router.push("chat/newGroup")}
-                className="addNewGroup"
+                className={`addNewGroup ${isActive("/chat/newGroup")}`}
               >
                 Add a new group
               </button>
