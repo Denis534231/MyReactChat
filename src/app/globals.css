@@ -601,12 +601,8 @@ a {
   transform: scale(0.95);
 }
 
-.sidebar .active {
-  color: blue;
-  font-weight: bold;
-}
-
 .active {
-  color: blue;
-  font-weight: bold;
+  background-color: rgba(46, 161, 182, 0.377);
+  border-radius: 6px;
+  font-weight: 600;
 }

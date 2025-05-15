@@ -46,7 +46,7 @@ export default function Sidebar() {
         <div className="sideBarLinks">
           <Link href="/" className={`link-icon ${isActive("/")}`}>
             <FontAwesomeIcon icon={faHouse} className="sideBarIcon" />
-            <p className="sideBarLink">Home</p>
+            <p className={`sideBarLink ${isActive("/")}`}>Home</p>
           </Link>
 
           <div className="link-icon">
@@ -93,7 +93,7 @@ export default function Sidebar() {
           {openGroups && (
             <div className="opened">
               <button
-                onClick={() => router.push("chat/newGroup")}
+                onClick={() => router.push("/chat/newGroup")}
                 className={`addNewGroup ${isActive("/chat/newGroup")}`}
               >
                 Add a new group
