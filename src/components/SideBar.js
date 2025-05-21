@@ -17,8 +17,18 @@ import { IoIosArrowForward } from "react-icons/io";
 
 export default function Sidebar() {
   const router = useRouter();
+  const pathname = usePathname();
   const [openChats, setOpenChats] = useState(false);
   const [openGroups, setOpenGroups] = useState(false);
+  const [chatLinks, setChatLinks] = useState([]);
+  const [newChat, setNewChat] = useState("");
+
+  const handleAddChat = () => {
+    if (!newChat.trim()) return;
+    setChatLinks([...chatLinks, newChat]);
+    setNewChat("");
+  };
+
   let arrowIconChats;
   let arrowIconGroups;
 
@@ -32,7 +42,7 @@ export default function Sidebar() {
   } else {
     arrowIconGroups = <IoIosArrowForward />;
   }
-  const pathname = usePathname();
+
   const isActive = (path) => (pathname === path ? "active" : "");
 
   return (
@@ -46,7 +56,7 @@ export default function Sidebar() {
         <div className="sideBarLinks">
           <Link href="/" className={`link-icon ${isActive("/")}`}>
             <FontAwesomeIcon icon={faHouse} className="sideBarIcon" />
-            <p className={`sideBarLink ${isActive("/")}`}>Home</p>
+            <p className={"sideBarLink"}>Home</p>
           </Link>
 
           <div className="link-icon">
@@ -59,6 +69,7 @@ export default function Sidebar() {
               {arrowIconChats}
             </button>
           </div>
+
           {openChats && (
             <div className="opened">
               <Link
@@ -75,6 +86,24 @@ export default function Sidebar() {
               >
                 Artem
               </Link>
+
+              {chatLinks.map((chat, index) => (
+                <Link key={index} href={`/chat/pm/${chat}`}>
+                  {chat}
+                </Link>
+              ))}
+
+              <div className="addGroup">
+                <input
+                  value={newChat}
+                  onChange={(e) => setNewChat(e.target.value)}
+                  placeholder="New chat"
+                  className="addGroupInput"
+                />
+                <button onClick={handleAddChat} className="addGroupButton">
+                  Add
+                </button>
+              </div>
             </div>
           )}
 
@@ -89,6 +118,7 @@ export default function Sidebar() {
             </button>
           </div>
         </div>
+
         <div className="groupsOpened-settings">
           {openGroups && (
             <div className="opened">

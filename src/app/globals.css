@@ -565,7 +565,7 @@ a {
   gap: 270px;
 }
 
-.addNewGroup {
+.addGroupButton {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -576,12 +576,12 @@ a {
   transition: color 0.4s, text-shadow 0.4s, transform 0.001s ease;
 }
 
-.addNewGroup:active {
+.addGroupButton:active {
   color: #414932;
   transform: scale(0.95);
 }
 
-.addNewGroup:hover {
+.addGroupButton:hover {
   color: #e1f5fe;
   text-shadow: 0 0 5px #568398;
 }
