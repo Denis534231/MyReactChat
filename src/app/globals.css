@@ -551,7 +551,7 @@ a {
   gap: 4px;
 }
 
-.opened {
+.chatsOpened {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -565,15 +565,12 @@ a {
   gap: 270px;
 }
 
-.addGroupButton {
+.addChatButton {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: none;
+  background: blue;
   border: none;
   font-size: 20px;
-  font-weight: 500;
-  transition: color 0.4s, text-shadow 0.4s, transform 0.001s ease;
+  width: 40px;
 }
 
 .addGroupButton:active {
@@ -605,4 +602,58 @@ a {
   background-color: rgba(46, 161, 182, 0.377);
   border-radius: 6px;
   font-weight: 600;
+}
+
+/* .modal .overlay {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+} */
+
+/* .overlay {
+  background: rgba(49, 49, 49, 0.8);
+} */
+
+/* .modal-content {
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background: #f1f1f1;
+  padding: 14px 28px;
+  border-radius: 3px;
+  max-width: 600px;
+  min-width: 300px;
+} */
+
+.modal-content {
+  width: 200px;
+  height: 200px;
+  background-color: #71adcf;
+}
+
+.modalInputButton {
+  display: flex;
+  flex-direction: column;
+}
+
+.modalCloseButton {
+  background: none;
+  border: none;
+}
+
+.modalClose {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.modalText {
+  font-size: 20px;
+}
+
+.modalAddButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
 }

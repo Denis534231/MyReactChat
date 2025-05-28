@@ -22,11 +22,16 @@ export default function Sidebar() {
   const [openGroups, setOpenGroups] = useState(false);
   const [chatLinks, setChatLinks] = useState([]);
   const [newChat, setNewChat] = useState("");
+  const [openModalWindow, setOpenModalWindow] = useState(false);
 
   const handleAddChat = () => {
     if (!newChat.trim()) return;
     setChatLinks([...chatLinks, newChat]);
     setNewChat("");
+  };
+
+  const handleOpenModalWindow = () => {
+    setOpenModalWindow(!openModalWindow);
   };
 
   let arrowIconChats;
@@ -52,6 +57,34 @@ export default function Sidebar() {
         <p className="sidebarUserName">Denchik</p>
       </div>
 
+      <button onClick={handleOpenModalWindow}>+</button>
+      {openModalWindow && (
+        <div className="modal-content">
+          <div className="modalClose">
+            <button
+              className="modalCloseButton"
+              onClick={handleOpenModalWindow}
+            >
+              ❌
+            </button>
+          </div>
+          <h1 className="modalText">Open a new PM</h1>
+          <p>username:</p>
+          <div className="modalInputButton">
+            <input
+              value={newChat}
+              onChange={(e) => setNewChat(e.target.value)}
+              placeholder="New chat"
+              className="addGroupInput"
+            />
+            <div className="modalAddButton">
+              <button onClick={handleAddChat} className="addChatButton">
+                Go
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       <div className="sideBarLinks-Settings">
         <div className="sideBarLinks">
           <Link href="/" className={`link-icon ${isActive("/")}`}>
@@ -62,6 +95,7 @@ export default function Sidebar() {
           <div className="link-icon">
             <FontAwesomeIcon icon={faMessage} className="sideBarIcon" />
             <p className="sideBarLink">Chats</p>
+
             <button
               className="toggle-btn"
               onClick={() => setOpenChats(!openChats)}
@@ -71,7 +105,7 @@ export default function Sidebar() {
           </div>
 
           {openChats && (
-            <div className="opened">
+            <div className="chatsOpened">
               <Link
                 href="/chat/pm/Artem"
                 className={`sideBarOpenedLink ${isActive("/chat/pm/Artem")}`}
@@ -92,18 +126,6 @@ export default function Sidebar() {
                   {chat}
                 </Link>
               ))}
-
-              <div className="addGroup">
-                <input
-                  value={newChat}
-                  onChange={(e) => setNewChat(e.target.value)}
-                  placeholder="New chat"
-                  className="addGroupInput"
-                />
-                <button onClick={handleAddChat} className="addGroupButton">
-                  Add
-                </button>
-              </div>
             </div>
           )}
 
