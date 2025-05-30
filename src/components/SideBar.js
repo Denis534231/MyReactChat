@@ -28,6 +28,7 @@ export default function Sidebar() {
     if (!newChat.trim()) return;
     setChatLinks([...chatLinks, newChat]);
     setNewChat("");
+    router.push(`/chat/pm/${newChat}`);
   };
 
   const handleOpenModalWindow = () => {
