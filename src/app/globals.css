@@ -271,7 +271,6 @@ main{
   width: 30px;
   background-color: #c5df1e;
   border-radius: 50%;
-
   margin-top: 5px;
 }
 
@@ -656,4 +655,8 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: end;
+}
+
+.addedLink {
+  color: #000000;
 }

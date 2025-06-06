@@ -29,6 +29,7 @@ export default function Sidebar() {
     setChatLinks([...chatLinks, newChat]);
     setNewChat("");
     router.push(`/chat/pm/${newChat}`);
+    setOpenModalWindow(false);
   };
 
   const handleOpenModalWindow = () => {
@@ -38,7 +39,7 @@ export default function Sidebar() {
   let arrowIconChats;
   let arrowIconGroups;
 
-  if (openChats) {
+  if (openChats == true) {
     arrowIconChats = <IoIosArrowDown />;
   } else {
     arrowIconChats = <IoIosArrowForward />;
@@ -59,7 +60,7 @@ export default function Sidebar() {
       </div>
 
       <button onClick={handleOpenModalWindow}>+</button>
-      {openModalWindow && (
+      {openModalWindow === true && (
         <div className="modal-content">
           <div className="modalClose">
             <button
@@ -93,17 +94,14 @@ export default function Sidebar() {
             <p className={"sideBarLink"}>Home</p>
           </Link>
 
-          <div className="link-icon">
+          <button
+            className="toggle-btn link-icon"
+            onClick={() => setOpenChats(!openChats)}
+          >
             <FontAwesomeIcon icon={faMessage} className="sideBarIcon" />
             <p className="sideBarLink">Chats</p>
-
-            <button
-              className="toggle-btn"
-              onClick={() => setOpenChats(!openChats)}
-            >
-              {arrowIconChats}
-            </button>
-          </div>
+            {arrowIconChats}
+          </button>
 
           {openChats && (
             <div className="chatsOpened">
@@ -123,23 +121,25 @@ export default function Sidebar() {
               </Link>
 
               {chatLinks.map((chat, index) => (
-                <Link key={index} href={`/chat/pm/${chat}`}>
+                <Link
+                  key={index}
+                  className={`${isActive(`/chat/pm/${chat}`)} addedLink `}
+                  href={`/chat/pm/${chat}`}
+                >
                   {chat}
                 </Link>
               ))}
             </div>
           )}
 
-          <div className="link-icon">
+          <button
+            className="toggle-btn link-icon"
+            onClick={() => setOpenGroups(!openGroups)}
+          >
             <FontAwesomeIcon icon={faUserGroup} className="sideBarIcon" />
             <p className="sideBarLink">Groups</p>
-            <button
-              className="toggle-btn"
-              onClick={() => setOpenGroups(!openGroups)}
-            >
-              {arrowIconGroups}
-            </button>
-          </div>
+            {arrowIconGroups}
+          </button>
         </div>
 
         <div className="groupsOpened-settings">
