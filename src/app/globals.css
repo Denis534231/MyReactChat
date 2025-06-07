@@ -206,7 +206,7 @@ main{
   background-color: #ffffff9f;
   border-radius: 15px;
   font-size: xx-large;
-  width: 1000px;
+  width: 680px;
 }
 
 .inputArtem::placeholder {
@@ -659,4 +659,12 @@ a {
 
 .addedLink {
   color: #000000;
+}
+
+.modalWindowOpenButton {
+  font-weight: 700;
+  text-decoration: none;
+  background: none;
+  border: none;
+  font-size: 20px;
 }

@@ -58,35 +58,6 @@ export default function Sidebar() {
         <FontAwesomeIcon icon={faUser} className="sidebarUserIcon" />
         <p className="sidebarUserName">Denchik</p>
       </div>
-
-      <button onClick={handleOpenModalWindow}>+</button>
-      {openModalWindow === true && (
-        <div className="modal-content">
-          <div className="modalClose">
-            <button
-              className="modalCloseButton"
-              onClick={handleOpenModalWindow}
-            >
-              ❌
-            </button>
-          </div>
-          <h1 className="modalText">Open a new PM</h1>
-          <p>username:</p>
-          <div className="modalInputButton">
-            <input
-              value={newChat}
-              onChange={(e) => setNewChat(e.target.value)}
-              placeholder="New chat"
-              className="addGroupInput"
-            />
-            <div className="modalAddButton">
-              <button onClick={handleAddChat} className="addChatButton">
-                Go
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
       <div className="sideBarLinks-Settings">
         <div className="sideBarLinks">
           <Link href="/" className={`link-icon ${isActive("/")}`}>
@@ -101,8 +72,40 @@ export default function Sidebar() {
             <FontAwesomeIcon icon={faMessage} className="sideBarIcon" />
             <p className="sideBarLink">Chats</p>
             {arrowIconChats}
+            <button
+              className="modalWindowOpenButton"
+              onClick={handleOpenModalWindow}
+            >
+              +
+            </button>
           </button>
-
+          {openModalWindow === true && (
+            <div className="modal-content">
+              <div className="modalClose">
+                <button
+                  className="modalCloseButton"
+                  onClick={handleOpenModalWindow}
+                >
+                  ❌
+                </button>
+              </div>
+              <h1 className="modalText">Open a new PM</h1>
+              <p>username:</p>
+              <div className="modalInputButton">
+                <input
+                  value={newChat}
+                  onChange={(e) => setNewChat(e.target.value)}
+                  placeholder="New chat"
+                  className="addGroupInput"
+                />
+                <div className="modalAddButton">
+                  <button onClick={handleAddChat} className="addChatButton">
+                    Go
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
           {openChats && (
             <div className="chatsOpened">
               <Link
