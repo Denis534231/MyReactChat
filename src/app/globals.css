@@ -668,3 +668,23 @@ a {
   border: none;
   font-size: 20px;
 }
+.modal-overlay {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-window {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+}
