@@ -11,6 +11,7 @@ import {
   faHouse,
   faUserGroup,
   faMessage,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
@@ -34,6 +35,7 @@ export default function Sidebar() {
 
   const handleOpenModalWindow = () => {
     setOpenModalWindow(!openModalWindow);
+    setOpenChats(true);
   };
 
   let arrowIconChats;
@@ -58,6 +60,9 @@ export default function Sidebar() {
         <FontAwesomeIcon icon={faUser} className="sidebarUserIcon" />
         <p className="sidebarUserName">Denchik</p>
       </div>
+      <button className="modalWindowOpenButton" onClick={handleOpenModalWindow}>
+        +
+      </button>
       <div className="sideBarLinks-Settings">
         <div className="sideBarLinks">
           <Link href="/" className={`link-icon ${isActive("/")}`}>
@@ -71,12 +76,12 @@ export default function Sidebar() {
             <FontAwesomeIcon icon={faMessage} className="sideBarIcon" />
             <p className="sideBarLink">Chats</p>
             {arrowIconChats}
-            <button
+            {/* <button
               className="modalWindowOpenButton"
               onClick={handleOpenModalWindow}
             >
               +
-            </button>
+            </button> */}
           </button>
           {/* <button onClick={() => setOpenModalWindow(true)}>Open Modal</button> */}
           {openModalWindow && (
@@ -93,22 +98,28 @@ export default function Sidebar() {
                     className="modalCloseButton"
                     onClick={handleOpenModalWindow}
                   >
-                    ❌
+                    <FontAwesomeIcon
+                      icon={faXmark}
+                      className="modalCloseIcon"
+                    />
                   </button>
                 </div>
                 <h1 className="modalText">Open a new PM</h1>
-                <p>username:</p>
-                <div className="modalInputButton">
-                  <input
-                    value={newChat}
-                    onChange={(e) => setNewChat(e.target.value)}
-                    placeholder="New chat"
-                    className="addGroupInput"
-                  />
-                  <div className="modalAddButton">
-                    <button onClick={handleAddChat} className="addChatButton">
-                      Go
-                    </button>
+                <div class="line"></div>
+                <div className="modalUsername-input">
+                  <p className="modalUsername">Username</p>{" "}
+                  <div className="modalInput-Button">
+                    <input
+                      value={newChat}
+                      onChange={(e) => setNewChat(e.target.value)}
+                      placeholder="Enter username"
+                      className="modalInput"
+                    />
+                    <div className="modalAddButton">
+                      <button onClick={handleAddChat} className="addChatButton">
+                        Go
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -160,6 +171,12 @@ export default function Sidebar() {
                 className={`addNewGroup ${isActive("/chat/newGroup")}`}
               >
                 Add a new group
+                <button
+                  className="modalWindowOpenButton"
+                  onClick={handleOpenModalWindow}
+                >
+                  +
+                </button>
               </button>
             </div>
           )}

@@ -648,13 +648,21 @@ a {
 }
 
 .modalText {
+  display: flex;
   font-size: 20px;
 }
 
+.modalUsername {
+  display: flex;
+  align-self: flex-start;
+  font-size: 16px;
+  color: #000000ad;
+}
 .modalAddButton {
   display: flex;
   flex-direction: row;
   justify-content: end;
+  color: #000000;
 }
 
 .addedLink {
@@ -687,4 +695,45 @@ a {
   width: 300px;
   height: 200px;
   text-align: center;
+}
+
+.line {
+  display: flex;
+  height: 1px;
+  background-color: #ccc;
+  margin: 10px 0 20px 0;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modalUsername-input {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.addChatButton {
+  background-color: #2563eb;
+  color: white;
+  font-weight: bold;
+  border-radius: 7px;
+}
+
+.modalInput {
+  width: 290px;
+  font-size: 15px;
+}
+
+.modalInput-Button {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modalCloseIcon {
+  font-size: 24px;
+}
+
+.modalWindowOpenButton {
+  margin: 2px;
 }
