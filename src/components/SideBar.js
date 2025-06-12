@@ -60,29 +60,28 @@ export default function Sidebar() {
         <FontAwesomeIcon icon={faUser} className="sidebarUserIcon" />
         <p className="sidebarUserName">Denchik</p>
       </div>
-      <button className="modalWindowOpenButton" onClick={handleOpenModalWindow}>
-        +
-      </button>
       <div className="sideBarLinks-Settings">
         <div className="sideBarLinks">
           <Link href="/" className={`link-icon ${isActive("/")}`}>
             <FontAwesomeIcon icon={faHouse} className="sideBarIcon" />
             <p className={"sideBarLink"}>Home</p>
           </Link>
-          <button
-            className="toggle-btn link-icon"
-            onClick={() => setOpenChats(!openChats)}
-          >
-            <FontAwesomeIcon icon={faMessage} className="sideBarIcon" />
-            <p className="sideBarLink">Chats</p>
-            {arrowIconChats}
-            {/* <button
+          <div className="link-icon">
+            <button
+              className="toggle-btn link-icon"
+              onClick={() => setOpenChats(!openChats)}
+            >
+              <FontAwesomeIcon icon={faMessage} className="sideBarIcon" />
+              <p className="sideBarLink">Chats</p>
+              {arrowIconChats}
+            </button>
+            <button
               className="modalWindowOpenButton"
               onClick={handleOpenModalWindow}
             >
               +
-            </button> */}
-          </button>
+            </button>
+          </div>
           {/* <button onClick={() => setOpenModalWindow(true)}>Open Modal</button> */}
           {openModalWindow && (
             <div
@@ -128,18 +127,10 @@ export default function Sidebar() {
           {openChats && (
             <div className="chatsOpened">
               <Link
-                href="/chat/pm/Artem"
-                className={`sideBarOpenedLink ${isActive("/chat/pm/Artem")}`}
+                href="/chat/pm/Username"
+                className={`sideBarOpenedLink ${isActive("/chat/pm/chat")}`}
               >
                 link
-              </Link>
-              <Link
-                href="/chat/pm/chatWithArtem"
-                className={`sideBarOpenedLink ${isActive(
-                  "/chat/pm/chatWithArtem"
-                )}`}
-              >
-                Artem
               </Link>
 
               {chatLinks.map((chat, index) => (

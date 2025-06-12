@@ -24,9 +24,7 @@ import MessagesList from "@/components/MessagesList";
 
 import ChatFooter from "@/components/ChatFooter";
 
-import { usePathname } from "next/navigation";
-
-export default function ChatWithArtem({ params }) {
+export default function ChatWithArtem() {
   const [messages, setMessages] = useState([
     { name: "Arteem", time: "9:22", text: "Hello, Denys" },
 
@@ -65,15 +63,10 @@ export default function ChatWithArtem({ params }) {
     }
   };
 
-  const pathname = usePathname();
-
   return (
     <>
       <div className="chat-wrapper">
-        <div className="hat">
-          <FontAwesomeIcon icon={faUser} className="TemporaryDenysIcon" />
-          <p className="TemporaryDenysName">{params.id}</p>
-        </div>
+        <ChatHeader />
         <MessagesList messages={messages} />
         <ChatFooter
           inputValue={inputValue}
