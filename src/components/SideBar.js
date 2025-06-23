@@ -159,7 +159,7 @@ export default function Sidebar() {
             <div className="opened">
               <button
                 onClick={() => router.push("/chat/newGroup")}
-                className={`addNewGroup ${isActive("/chat/newGroup")}`}
+                className={`addNewGroupButton ${isActive("/chat/newGroup")}`}
               >
                 Add a new group
                 <button

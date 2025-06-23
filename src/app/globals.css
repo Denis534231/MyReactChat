@@ -572,12 +572,12 @@ a {
   width: 40px;
 }
 
-.addGroupButton:active {
+.addNewGroupButton:active {
   color: #414932;
   transform: scale(0.95);
 }
 
-.addGroupButton:hover {
+.addNewGroupButton:hover {
   color: #e1f5fe;
   text-shadow: 0 0 5px #568398;
 }

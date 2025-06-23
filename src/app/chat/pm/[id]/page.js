@@ -26,7 +26,7 @@ import ChatFooter from "@/components/ChatFooter";
 
 import { usePathname } from "next/navigation";
 
-export default function ChatWithArtem({ params }) {
+export default function Chat({ params }) {
   const [messages, setMessages] = useState([
     { name: "Arteem", time: "9:22", text: "Hello, Denys" },
 
